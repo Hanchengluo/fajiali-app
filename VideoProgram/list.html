@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>法加理-</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <!--标准mui.css-->
+        <link rel="stylesheet" href="../css/mui.min.css">
+        <!--App自定义的css-->
+        <link rel="stylesheet" type="text/css" href="../css/app.css"/>
+    </head>
+    <body>
+        <header class="mui-bar mui-bar-nav bg-lan">
+            <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left col-bai"></a>
+            <h1 class="mui-title col-bai">视频列表</h1>
+        </header>
+        <nav class="mui-bar mui-bar-tab" id="mui-menu-box">
+            <a class="mui-menu-item" href="../index.html">
+                <i class="mui-icon iconfont">&#xe610;</i>
+                <span class="mui-tab-label">首页</span>
+            </a>
+            <a class="mui-menu-item" href="../LookingLawyer/index.html">
+                <i class="mui-icon iconfont">&#xe60f;</i>
+                <span class="mui-tab-label">找律师</span>
+            </a>
+            <a class="mui-menu-item" href="../LegalAdvice/index.html">
+                <i class="mui-icon iconfont">&#xe60d;<span class="mui-badge">9</span></i>
+                <span class="mui-tab-label">法律咨询</span>
+            </a>
+            <a class="mui-menu-item" href="../UserCenter/index.html">
+                <i class="mui-icon iconfont">&#xe600;</i>
+                <span class="mui-tab-label">个人中心</span>
+            </a>
+            <a class="mui-menu-item" href="../MyLawyer/index.html">
+                <i class="mui-icon iconfont">&#xe60b;</i>
+                <span class="mui-tab-label">我的律师</span>
+            </a>
+        </nav>
+        <div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <div class="mui-content">
+                    <div class="mui-column margin-top10 bg-bai">
+                        <div class="mui-column-title">
+                            <ul class="mui-table-view">
+                              <li class="mui-table-view-cell">
+                                <a class="mui-navigate-right font10e col-menu1" href="list.html">
+                                  <i class="mui-icon iconfont font10e">&#xe609;</i>
+                                    视频推荐
+                                </a>
+                              </li>
+                            </ul>
+                        </div>
+                        <div class="mui-news-column">
+                            <div class="mui-news-list mui-clearfix">
+
+                                    <div class="news-img">
+                                        <a href="info.html"><img src="../update/news-img1.jpg" alt=""><i class="iconfont mui-play">&#xe61d;</i></a>
+                                    </div>
+                                    <div class="news-info mui-pull-right">
+                                        <a href="info.html"><h5 class="title">徐玉玉诈骗案核心细节曝光背后真相惊人</h5>
+                                        <p class="mui-ellipsis-2">三起学生遭电信网络诈骗案告破 近日，山东、广东等地连续发生3起学生遭...</p>
+                                        </a>
+                                        <p class="mui-clearfix"><span>2016-09-12</span><span class="mui-pull-right"><i class="mui-icon iconfont margin" style="font-size: 12px;">&#xe61e;</i>4231</span><span class="mui-pull-right margin-right4"><i class="mui-icon iconfont">&#xe617;</i>234</span></p>
+                                    </div>
+                            </div>
+                            <div class="mui-news-list mui-clearfix">
+                                <div class="news-img">
+                                    <a href="info.html"><img src="../update/news-img1.jpg" alt=""><i class="iconfont mui-play">&#xe61d;</i></a>
+                                </div>
+                                <div class="news-info mui-pull-right">
+                                    <a href="info.html"><h5 class="title">徐玉玉诈骗案核心细节曝光背后真相惊人</h5>
+                                    <p class="mui-ellipsis-2">三起学生遭电信网络诈骗案告破 近日，山东、广东等地连续发生3起学生遭...</p></a>
+                                    <p class="mui-clearfix"><span>2016-09-12</span><span class="mui-pull-right"><i class="mui-icon iconfont margin" style="font-size: 12px;">&#xe61e;</i>4231</span><span class="mui-pull-right margin-right4"><i class="mui-icon iconfont">&#xe624;</i>234</span></p>
+                                </div>
+                            </div>
+                            <div class="mui-news-list mui-clearfix">
+                                <div class="news-img">
+                                    <a href="info.html"><img src="../update/news-img1.jpg" alt=""><i class="iconfont mui-play">&#xe61d;</i></a>
+                                </div>
+                                <div class="news-info mui-pull-right">
+                                    <a href="info.html"><h5 class="title">徐玉玉诈骗案核心细节曝光背后真相惊人</h5>
+                                    <p class="mui-ellipsis-2">三起学生遭电信网络诈骗案告破 近日，山东、广东等地连续发生3起学生遭...</p></a>
+                                    <p class="mui-clearfix"><span>2016-09-12</span><span class="mui-pull-right"><i class="mui-icon iconfont margin" style="font-size: 12px;">&#xe61e;</i>4231</span><span class="mui-pull-right margin-right4"><i class="mui-icon iconfont">&#xe624;</i>234</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../js/mui.min.js"></script>
+        <script>
+            mui.init({
+                swipeBack: false,
+            });
+             //主界面和侧滑菜单界面均支持区域滚动；
+            mui('#offCanvasSideScroll').scroll();
+            mui('#offCanvasContentScroll').scroll();
+        </script>
+    </body>
+
+</html>

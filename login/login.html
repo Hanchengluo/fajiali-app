@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html class="ui-page-login">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>登陆页面</title>
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link href="../css/app.css" rel="stylesheet" />
+	</head>
+	<style>
+		.ui-page-login,
+		body {
+			width: 100%;
+			height: 100%;
+			margin: 0px;
+			padding: 0px;
+		}
+		.mui-content{height: 100%;}
+		.mui-bar-nav{
+		    background: none;
+    		box-shadow: none;
+		}
+		#SecurityCode{
+			position: absolute;
+			top: 2px;
+			right: 15px;
+			width: 70px;
+		}
+	</style>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<h1 class="mui-title"></h1>
+		</header>
+		<div class="mui-content" id="mui-login">
+			<div class="mui-text-center">
+				<img src="../images/logo.png" height="80" width="80" alt="">
+				<p class="col-bai mui-text-center" style="padding-bottom:30px;">法加理</p>
+			</div>
+			<form id='login-form' class="mui-input-group margin10">
+				<div class="mui-input-row">
+					<label>账号</label>
+					<input id='account' type="text" class="mui-input-clear mui-input" placeholder="请输入账号">
+				</div>
+			</form>
+			<form class="mui-input-group margin10">
+				<div class="mui-input-row">
+					<label>密码</label>
+					<input id='password' type="password" class="mui-input-clear mui-input" placeholder="请输入密码">
+				</div>
+			</form>
+			<form class="mui-input-group margin10">
+				<ul class="mui-table-view mui-table-view-chevron">
+					<li class="mui-table-view-cell" style="padding: 0;">
+						<input id='account' type="text" class="mui-input-clear mui-input" placeholder="输入验证码">
+						<div id="SecurityCode" class="">
+							<img src="../update/20161022143448.png" alt="../update/20161022143448.png" width="100%">
+						</div>
+					</li>
+				</ul>
+			</form>
+			<form class="mui-input-group margin10">
+				<ul class="mui-table-view mui-table-view-chevron">
+					<li class="mui-table-view-cell">
+						自动登录
+						<div id="autoLogin" class="mui-switch">
+							<div class="mui-switch-handle"></div>
+						</div>
+					</li>
+				</ul>
+			</form>
+			<div class="mui-content-padded">
+				<a href="../UserCenter/index.html" id='login' class="mui-btn mui-btn-block mui-btn-primary">登录</a>
+				<div class="link-area mui-clearfix"><a href="reg.html" class="mui-pull-left" id='reg'>注册账号</a> <a href="forgetPassword.html" class="mui-pull-right" id='forgetPassword'>忘记密码?</a>
+				</div>
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+	</body>
+
+</html>
