@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>法加理-</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <!--标准mui.css-->
+        <link rel="stylesheet" href="../css/mui.min.css">
+        <!--App自定义的css-->
+        <link rel="stylesheet" type="text/css" href="../css/app.css"/>
+    </head>
+    <body>
+        <header class="mui-bar mui-bar-nav bg-lan">
+            <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left col-bai"></a>
+            <h1 class="mui-title col-bai">私信咨询</h1>
+        </header>
+        <div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <div class="mui-content">
+                    <div class="margin-top10 margin10">
+                        <input type="text" style="margin-bottom: 0;" placeholder="请输入问题简要">
+                    </div>
+                    <div class="row mui-input-row margin10 margin-top10" style="    position: relative;">
+                        <textarea id='question' class="mui-input-clear question" placeholder="请在此处详细描述您事情发生的时间、地点、经过及想获得什么样的帮助。 " style="height: 100px;"></textarea>
+                        <div id="update-camera">
+                            <i class="icon iconfont font14e" style="color: #999;">&#xe621;</i>
+                            <input type="file" class="update-camera-input">
+                        </div>
+                        <div id="update-photo">
+                            <i class="icon iconfont font14e" style="color: #999;">&#xe61b;</i>
+                            <input type="file" class="update-photo-input">
+                        </div>
+                    </div>
+                    <!-- 以下代码是用于上传图片之后显示图片的
+                    <div id="update-end" class="padding10 margin-top10 bg-bai mui-clearfix">
+                        <img src="../update/lawyer2.jpg">
+                        <img src="../update/lawyer2.jpg">
+                    </div> -->
+                    <div class="margin10 margin-top10">
+                        <a href="" id="mui-reply-btn" class="mui-btn mui-btn-primary mui-btn-block" style="padding: 6px 12px;">提  交</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../js/mui.min.js"></script>
+        <script>
+            mui.init({
+                swipeBack: false,
+            });
+             //主界面和侧滑菜单界面均支持区域滚动；
+            mui('#offCanvasSideScroll').scroll();
+            mui('#offCanvasContentScroll').scroll();
+
+        </script>
+    </body>
+
+</html>

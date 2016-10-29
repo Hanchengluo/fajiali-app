@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>法加理-</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <!--标准mui.css-->
+        <link rel="stylesheet" href="../css/mui.min.css">
+        <!--App自定义的css-->
+        <link rel="stylesheet" type="text/css" href="../css/app.css"/>
+        <style>
+        .mui-badge{
+            max-width: 200px;
+        }
+        </style>
+    </head>
+    <body>
+        <header class="mui-bar mui-bar-nav bg-lan">
+            <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left col-bai"></a>
+            <a href="InvoiceList.html" id="submit" class="mui-btn mui-btn-blue mui-btn-link mui-pull-right">选择</a>
+            <h1 class="mui-title col-bai">发票详情</h1>
+        </header>
+        <div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <div class="mui-content">
+                    <div class="margin-top10">
+                        <ul class="mui-table-view">
+                            <li class="mui-table-view-cell">发票类型 <span class="mui-badge">纸质发票</span></li>
+                            <li class="mui-table-view-cell">发票抬头 <span class="mui-badge">个人</span></li>
+                            <li class="mui-table-view-divider">收票人信息</li>
+                            <li class="mui-table-view-cell">姓名 <span class="mui-badge">张三</span></li>
+                            <li class="mui-table-view-cell">手机 <span class="mui-badge">18924918891</span></li>
+                            <li class="mui-table-view-cell">地区 <span class="mui-badge">广东省广州市白云区</span></li>
+                            <li class="mui-table-view-cell">街道 <span class="mui-badge">广州大道北1239号42栋白云离职干休所门口大楼4层</span></li>
+                            <li class="mui-table-view-cell">发票内容 <span class="mui-badge">咨询服务费</span></li>
+                        </ul>
+                    </div>
+                    <div class="margin10 margin-top10">
+                        <a href="InvoiceAdd.html" id="mui-reply-btn" class="mui-btn mui-btn-primary mui-btn-block" style="padding: 6px 12px;">修改信息</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../js/mui.min.js"></script>
+        <script>
+            mui.init({
+                swipeBack: false,
+            });
+             //主界面和侧滑菜单界面均支持区域滚动；
+            mui('#offCanvasSideScroll').scroll();
+            mui('#offCanvasContentScroll').scroll();
+
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>法加理-</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <!--标准mui.css-->
+        <link rel="stylesheet" href="../css/mui.min.css">
+        <link rel="stylesheet" href="../css/swiper.min.css">
+        <!--App自定义的css-->
+        <link rel="stylesheet" type="text/css" href="../css/app.css"/>
+    </head>
+    <body>
+        <header class="mui-bar mui-bar-nav bg-lan">
+            <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left col-bai"></a>
+            <h1 class="mui-title col-bai">评论内容</h1>
+        </header>
+        <div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <div class="mui-content">
+                    <div class="mui-card">
+                        <div class="mui-card-header mui-card-media">
+                            <img src="../update/lawyer2.jpg">
+                            <div class="mui-media-body">
+                                网友大红色
+                                <p>评论于 2016-06-30 15:30</p>
+                            </div>
+                        </div>
+                        <div class="mui-card-content">
+                            <ul class="mui-table-view">
+                              <li class="mui-table-view-cell mui-media">
+                                <div class="comment-info">
+                                    <p class="details">英语老师上次上课讲such的时候猛地一顿:“我给你们看个视频，没有教坏你们的意思啊！”然后让我们把门和窗户都关上，窗帘都拉上，然后她轻轻点开U盘。没错，老大，就是你。你知道我当时的表情吗(｀・ω・´)</p>
+                                    <div class="mui-reply-img">
+                                        <ul class="mui-clearfix">
+                                            <li><img src="../update/lawyer1.jpg" data-preview-src="" data-preview-group="3"></li>
+                                            <li><img src="../update/lawyer2.jpg" data-preview-src="" data-preview-group="3"></li>
+                                            <li><img src="../update/lawyer3.jpg" data-preview-src="" data-preview-group="3"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                              </li>
+
+                            </ul>
+                        </div>
+                        <div class="mui-card-footer">
+                            <a id="promptBtn" class="mui-card-link" href="CommentList.html">回复</a>
+                            <a href="info.html" class="mui-card-link">查看文章</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../js/mui.min.js"></script>
+        <script>
+            mui.init({
+                swipeBack: false,
+            });
+             //主界面和侧滑菜单界面均支持区域滚动；
+            mui('#offCanvasSideScroll').scroll();
+            mui('#offCanvasContentScroll').scroll();
+            document.getElementById("promptBtn").addEventListener('tap', function(e) {
+                e.detail.gesture.preventDefault(); //修复iOS 8.x平台存在的bug，使用plus.nativeUI.prompt会造成输入法闪一下又没了
+                var btnArray = ['取消', '确定'];
+                mui.prompt('输入你的回复内容', '', '评论回复', btnArray, function(e) {
+                    if (e.index == 1) {
+                        mui.toast('您的成功回复：'+e.value);
+                    } else {
+                        mui.toast('你点了取消按钮');
+                    }
+                })
+            });
+        </script>
+    </body>
+
+</html>

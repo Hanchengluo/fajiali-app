@@ -15,6 +15,9 @@
             .mui-table-view {
                 margin-top: 10px;
             }
+            .head-img{
+                border-radius: 4px;
+            }
         </style>
     </head>
 
@@ -32,18 +35,18 @@
         <!--单页面开始-->
         <div id="setting" class="mui-page">
             <!--个人中心页面标题栏开始-->
-            <div class="mui-navbar-inner mui-bar mui-bar-nav bg-lan">
-                <h1 class="mui-center mui-title ">个人中心</h1>
+            <div class="mui-navbar-inner mui-bar mui-bar-nav bg-lan" style="    box-shadow: none;">
+                <h1 class="mui-center mui-title">个人中心</h1>
             </div>
             <!--页面标题栏结束-->
             <!--个人中心页面主内容区开始-->
             <div class="mui-page-content">
-                <div class="mui-scroll-wrapper">
+                <div class="mui-scroll-wrapper" style="padding-bottom:30px;">
                     <div class="mui-scroll">
-                        <ul class="mui-table-view mui-table-view-chevron">
+                        <ul class="mui-table-view mui-table-view-chevron" id="usercentent">
                             <li class="mui-table-view-cell mui-media">
                                 <a class="mui-navigate-right" href="#account">
-                                    <img class="mui-media-object mui-pull-left head-img" id="head-img" src="../update/user.png">
+                                    <img class="mui-media-object mui-pull-left head-img" id="head-img" src="../update/lawyer1.jpg" width="42">
                                     <div class="mui-media-body">
                                         Amely
                                         <p class='mui-ellipsis'>账户余额：586元</p>
@@ -53,18 +56,49 @@
                         </ul>
                         <ul class="mui-table-view mui-table-view-chevron">
                             <li class="mui-table-view-cell">
-                                <a href="#notifications" class="mui-navigate-right">我的评论</a>
+                                <a href="#" class=""><i class="icon iconfont col-menu1 margin-right4">&#xe623;</i>我的订单</a>
                             </li>
                             <li class="mui-table-view-cell">
-                                <a href="#privacy" class="mui-navigate-right">我的收藏</a>
+                                <a href="ConsultingOrder/index.html" class="mui-navigate-right">咨询订单</a>
                             </li>
                             <li class="mui-table-view-cell">
-                                <a href="#general" class="mui-navigate-right">我的活动</a>
+                                <a href="LawyerOrder/index.html" class="mui-navigate-right">律师订单</a>
+                            </li>
+                            <li class="mui-table-view-cell">
+                                <a href="ArbitrationOrder/index.html" class="mui-navigate-right">仲裁结果</a>
                             </li>
                         </ul>
                         <ul class="mui-table-view mui-table-view-chevron">
                             <li class="mui-table-view-cell">
-                                <a href="#about" class="mui-navigate-right">关于我们</a>
+                                <a href="#MyWallet" class="mui-navigate-right"><i class="icon iconfont col-menu1 margin-right4">&#xe61c;</i>我的钱包</a>
+                            <li class="mui-table-view-cell">
+                                <a href="#MyMessage" class="mui-navigate-right"><i class="icon iconfont col-menu1 margin-right4">&#xe614;</i>我的留言</a>
+                            </li>
+                            <li class="mui-table-view-cell">
+                                <a href="#MyReportList" class="mui-navigate-right"><i class="icon iconfont col-menu1 margin-right4">&#xe625;</i>私单举报</a>
+                            </li>
+                            <li class="mui-table-view-cell">
+                                <a href="#MyComplaint" class="mui-navigate-right"><i class="icon iconfont col-menu1 margin-right4">&#xe618;</i>我的投诉</a>
+                            </li>
+                            <li class="mui-table-view-cell">
+                                <a href="#notifications" class="mui-navigate-right"><i class="icon iconfont col-menu1 margin-right4">&#xe61e;</i>我的评论</a>
+                            </li>
+                            <li class="mui-table-view-cell">
+                                <a href="#privacy" class="mui-navigate-right"><i class="icon iconfont col-menu1 margin-right4">&#xe605;</i>我的收藏</a>
+                            </li>
+                            <li class="mui-table-view-cell">
+                                <a href="#general" class="mui-navigate-right"><i class="icon iconfont col-menu1 margin-right4">&#xe608;</i>我的活动</a>
+                            </li>
+                        </ul>
+                        <ul class="mui-table-view mui-table-view-chevron">
+                            <li class="mui-table-view-cell">
+                                <a href="#Notice" class="mui-navigate-right"><i class="icon iconfont col-menu1 margin-right4">&#xe622;</i>系统通知</a>
+                            </li>
+                            <li class="mui-table-view-cell">
+                                <a href="#account" class="mui-navigate-right"><i class="mui-icon mui-icon-gear col-menu1 margin-right4" style="font-size: 16px;"></i>资料设置</a>
+                            </li>
+                            <li class="mui-table-view-cell">
+                                <a href="#about" class="mui-navigate-right"><i class="mui-icon mui-icon-info col-menu1 margin-right4" style="font-size: 16px;"></i>关于我们</a>
                             </li>
                         </ul>
                         <ul class="mui-table-view">
@@ -386,6 +420,224 @@
             </div>
         </div>
         <!-- 关于我们页面结束 -->
+        <!-- 系统通知页面开始 -->
+        <div id="Notice" class="mui-page">
+            <div class="mui-navbar-inner mui-bar mui-bar-nav">
+                <button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+                    <span class="mui-icon mui-icon-left-nav"></span>
+                </button>
+                <h1 class="mui-center mui-title">系统通知</h1>
+            </div>
+            <div class="mui-page-content">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <ul class="mui-table-view">
+                            <li class="mui-table-view-cell mui-media">
+                                <div class="mui-slider-right mui-disabled">
+                                    <a class="mui-btn mui-btn-success mui-icon mui-icon mui-icon-eye" href="#"></a>
+                                    <a class="mui-btn mui-btn-red mui-icon mui-icon-trash" id="delete-btn1"></a>
+                                </div>
+                                <div class="mui-media-body mui-slider-handle">
+                                  <a class="col-hui" href="about.html">关于2016年10月27日系统更新通知</a>
+                                  <p class="mui-ellipsis">烤炉模式的城，到黄昏，如同打翻的调色盘一般</p>
+                                </div>
+                            </li>
+                            <li class="mui-table-view-cell mui-media">
+                                <div class="mui-slider-right mui-disabled">
+                                    <a class="mui-btn mui-btn-success mui-icon mui-icon mui-icon-eye" href="#"></a>
+                                    <a class="mui-btn mui-btn-red mui-icon mui-icon-trash" id="delete-btn2"></a>
+                                </div>
+                                <!-- 代码提示：已读信息写入style="color: #999;" -->
+                                <div class="mui-media-body mui-slider-handle" style="color: #999;">
+                                    <a class="col-hui" href="">
+                                      订单下单成功提醒</a>
+                                  <p class="mui-ellipsis">纸质发票、广州大道北1239号42栋白云离职干休所门口大楼4层</p>
+                                </div>
+                            </li>
+                            <li class="mui-table-view-cell mui-media">
+                                <div class="mui-slider-right mui-disabled">
+                                    <a class="mui-btn mui-btn-success mui-icon mui-icon mui-icon-eye" href="#"></a>
+                                    <a class="mui-btn mui-btn-red mui-icon mui-icon-trash" id="delete-btn3"></a>
+                                </div>
+                                <div class="mui-media-body mui-slider-handle" style="color: #999;">
+                                  <a class="col-hui" href="">留言回复提醒</a>
+                                  <p class="mui-ellipsis">郑律师回复了您的留言，点击查看最新回复</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 系统通知页面结束 -->
+        <!-- 我的投诉页面开始 -->
+        <div id="MyComplaint" class="mui-page">
+            <div class="mui-navbar-inner mui-bar mui-bar-nav">
+                <button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+                    <span class="mui-icon mui-icon-left-nav"></span>
+                </button>
+                <h1 class="mui-center mui-title">我的投诉</h1>
+            </div>
+            <div class="mui-page-content">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <div class="mui-content bg-bai margin-top10 border-t">
+                            <div class="mui-attorney-list">
+                                <div class="mui-attorney-top mui-clearfix">
+                                    <div class="user-img">
+                                        <a href="../LookingLawyer/info.html"><img src="../update/userimg01.png" alt=""></a>
+                                    </div>
+                                    <div class="user-info mui-pull-right">
+                                        <a href="../LookingLawyer/info.html"><p class="name">郑律师</p></a>
+                                        <p class="speciality">下了单咨询一直没有回复我，好生气哦但是还是要保持微笑</p>
+                                    </div>
+                                </div>
+                                <p class="mui-attorney-bottom attorney-intro col-cheng">法加理：非常抱歉，我们已对你反馈的问题进行了处理。</p>
+                                <p class="mui-attorney-bottom">2016年10月27日15:39:30</p>
+                            </div>
+                            <div class="mui-attorney-list">
+                                <div class="mui-attorney-top mui-clearfix">
+                                    <div class="user-img">
+                                        <a href="../LookingLawyer/info.html"><img src="../update/userimg01.png" alt=""></a>
+                                    </div>
+                                    <div class="user-info mui-pull-right">
+                                        <a href="../LookingLawyer/info.html"><p class="name">郑律师</p></a>
+                                        <p class="speciality">下了单咨询一直没有回复我，好生气哦但是还是要保持微笑</p>
+                                    </div>
+                                </div>
+                                <p class="mui-attorney-bottom attorney-intro col-cheng">法加理：非常抱歉，我们已对你反馈的问题进行了处理。</p>
+                                <p class="mui-attorney-bottom">2016年10月27日15:39:30</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 我的投诉页面开始 -->
+        <!-- 私单举报列表页面开始 -->
+        <div id="MyReportList" class="mui-page">
+            <div class="mui-navbar-inner mui-bar mui-bar-nav">
+                <button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+                    <span class="mui-icon mui-icon-left-nav"></span>
+                </button>
+                <h1 class="mui-center mui-title">我的投诉</h1>
+            </div>
+            <div class="mui-page-content">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <ul class="mui-table-view mui-media">
+                            <li class="mui-table-view-cell mui-media">
+                              <a href="MyReportInof.html">
+                                <div class="mui-media-body">
+                                  订单编号：83252SG345SDG2Q45
+                                  <p class="col-cheng">后台正在审核</p>
+                                  <p class="mui-ellipsis-2">郑律师私下签订合同.</p>
+                                </div>
+                              </a>
+                            </li>
+                            <li class="mui-table-view-cell mui-media">
+                              <a href="MyReportInof.html">
+                                <img class="mui-media-object mui-pull-left" src="../update/news-img1.jpg">
+                                <img class="mui-media-object mui-pull-left" src="../update/news-img2.jpg">
+                                <img class="mui-media-object mui-pull-left" src="../update/news-img3.jpg">
+                              </a>
+                            </li>
+                        </ul>
+                        <ul class="mui-table-view mui-media">
+                            <li class="mui-table-view-cell mui-media">
+                              <a href="MyReportInof.html">
+                                <div class="mui-media-body">
+                                  订单编号：83252SG345SDG2Q45
+                                  <p class="col-cheng">后台正在审核</p>
+                                  <p class="mui-ellipsis-2">郑律师私下签订合同.</p>
+                                </div>
+                              </a>
+                            </li>
+                            <li class="mui-table-view-cell mui-media">
+                              <a href="MyReportInof.html">
+                                <img class="mui-media-object mui-pull-left" src="../update/news-img1.jpg">
+                                <img class="mui-media-object mui-pull-left" src="../update/news-img2.jpg">
+                                <img class="mui-media-object mui-pull-left" src="../update/news-img3.jpg">
+                                <img class="mui-media-object mui-pull-left" src="../update/news-img1.jpg">
+                                <img class="mui-media-object mui-pull-left" src="../update/news-img2.jpg">
+                              </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 私单举报列表页面结束 -->
+        <!-- 我的留言页面开始 -->
+        <div id="MyMessage" class="mui-page">
+            <div class="mui-navbar-inner mui-bar mui-bar-nav">
+                <button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+                    <span class="mui-icon mui-icon-left-nav"></span>
+                </button>
+                <h1 class="mui-center mui-title">我的留言</h1>
+            </div>
+            <div class="mui-page-content">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <div class="mui-card">
+                          <div class="mui-card-header mui-card-media">
+                            <div class="mui-media-body" style="margin-left: 0;">
+                              <p>发表于 2016-06-30 15:30</p>
+                            </div>
+                          </div>
+                          <div class="mui-card-content padding10">
+                            <p style="color: #333;">问：海上作业脚受伤了，半年没法工作，船老板后面三个月不肯给补偿，应该怎么办？</p>
+                          </div>
+                          <div class="mui-card-footer">
+                            <a class="mui-card-link">2回复</a>
+                            <a href="MyMessageList.html" class="mui-card-link">查看</a>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 我的留言页面结束 -->
+        <!-- 我的钱包页面开始 -->
+        <div id="MyWallet" class="mui-page">
+            <div class="mui-navbar-inner mui-bar mui-bar-nav">
+                <button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+                    <span class="mui-icon mui-icon-left-nav"></span>
+                </button>
+                <h1 class="mui-center mui-title">我的钱包</h1>
+            </div>
+            <div class="mui-page-content">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <div class="mui-MyWallet">
+                            <div class="wallet-icon">
+                                <i class="icon iconfont">&#xe61c;</i>
+                            </div>
+                            <p class="text">账号余额：<span class="col-cheng">￥2423.00</span></p>
+                            <p class="text">积分：<span class="col-cheng">242</span></p>
+                        </div>
+                        <div class="mui-MyWallet-btn">
+                            <ul class="mui-clearfix">
+                                <li><a href="MyRecharge.html" class="mui-btn mui-btn-primary"><i class="iconfont font10e margin-right4">&#xe616;</i>提现</a></li>
+                                <li><a href="MyRecharge.html" class="mui-btn btn-cheng"><i class="iconfont font10e margin-right4">&#xe613;</i>充值</a></li>
+                            </ul>
+                        </div>
+                        <ul class="mui-table-view mui-table-view-chevron" style="margin-top:0">
+                            <li class="mui-table-view-cell">
+                                <a href="TradingRecordList.html" class="mui-navigate-right">消费记录</a>
+                            </li>
+                            <li class="mui-table-view-cell">
+                                <a href="TradingRecordList.html" class="mui-navigate-right">获得记录</a>
+                            </li>
+                            <li class="mui-table-view-cell">
+                                <a href="TradingRecordList.html" class="mui-navigate-right">提现记录 </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 我的钱包页面结束 -->
         <!-- 意见反馈页面开始 -->
         <div id="feedback" class="mui-page feedback">
             <div class="mui-navbar-inner mui-bar mui-bar-nav">
@@ -427,6 +679,7 @@
                 <p>图片(选填,提供问题截图,总大小10M以下)</p>
                 <div id='image-list' class="row image-list">
                     <input type="file" class="update-img" >
+                    <div class="image-item space"><div class="image-close">X</div><div class="image-up"></div><div class="file" id="image-1"></div></div>
                 </div>
                 <div id="update-end" class="padding10 margin-top10 bg-bai mui-clearfix">
                     <img src="../update/lawyer2.jpg">
@@ -462,6 +715,18 @@
         });
         //初始化单页的区域滚动
         mui('.mui-scroll-wrapper').scroll();
+        document.getElementById("delete-btn1").addEventListener('tap', function() {
+            var btnArray = ['否', '是'];
+            mui.confirm('你是否确定要删除？', '信息提醒', btnArray, function(e) {
+                if (e.index == 1) {
+                    mui.toast('你已经残忍的把我删除');
+                } else {
+                    mui.toast('看来你还是使不得删我的');
+                }
+            })
+        });
+
+        // 处理单页面切换
         var view = viewApi.view;
         (function($) {
             //处理view的后退与webview后退

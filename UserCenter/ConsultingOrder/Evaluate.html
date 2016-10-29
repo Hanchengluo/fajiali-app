@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" class="feedback">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <title>用户评价</title>
+        <link rel="stylesheet" type="text/css" href="../../css/mui.min.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/feedback.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/app.css" />
+    </head>
+
+    <body>
+        <header class="mui-bar mui-bar-nav bg-lan">
+            <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left col-bai"></a>
+            <h1 class="mui-title col-bai">用户评价</h1>
+        </header>
+        <div class="mui-content">
+            <div class="mui-content-padded">
+                <div class="mui-inline">填写评论</div>
+                <a class="mui-pull-right mui-inline" href="#popover">
+                    快捷输入
+                    <span class="mui-icon mui-icon-arrowdown"></span>
+                </a>
+                <!--快捷输入具体内容，开发者可自己替换常用语-->
+                <div id="popover" class="mui-popover">
+                    <div class="mui-popover-arrow"></div>
+                    <div class="mui-scroll-wrapper">
+                        <div class="mui-scroll">
+                            <ul class="mui-table-view">
+                                <li class="mui-table-view-cell"><a href="#">律师很好，合作很满意</a></li>
+                                <li class="mui-table-view-cell"><a href="#">平台完成决绝了我的问题</a></li>
+                                <li class="mui-table-view-cell"><a href="#">这是一次很愉快的合作</a></li>
+                                <li class="mui-table-view-cell"><a href="#">这个次合作真的不是很满意</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mui-input-row">
+                <textarea id='question' class="mui-input-clear question" placeholder="请详细描述你的问题和意见..."></textarea>
+            </div>
+            <p>图片(选填,提供问题截图,总大小10M以下)</p>
+            <div id='image-list' class="row image-list">
+                <input type="file" class="update-img" >
+                <div class="image-item space"><div class="image-close">X</div><div class="image-up"></div><div class="file" id="image-1"></div></div>
+            </div>
+            <!-- 一下代码上传图片之后显示 -->
+            <!-- <div id="update-end" class="padding10 margin-top10 bg-bai mui-clearfix">
+                <img src="../../update/lawyer2.jpg">
+                <img src="../../update/lawyer2.jpg">
+            </div> -->
+            <div class="mui-content-padded">
+                <div class="mui-inline">合作评分</div>
+                <div class="icons mui-inline" style="margin-left: 6px;">
+                    <i data-index="1" class="mui-icon mui-icon-star"></i>
+                    <i data-index="2" class="mui-icon mui-icon-star"></i>
+                    <i data-index="3" class="mui-icon mui-icon-star"></i>
+                    <i data-index="4" class="mui-icon mui-icon-star"></i>
+                    <i data-index="5" class="mui-icon mui-icon-star"></i>
+                </div>
+            </div>
+            <div class="margin10 margin-top10">
+                <a href="##" id="mui-reply-btn" class="mui-btn mui-btn-primary mui-btn-block" style="padding: 6px 12px;">提交评论</a>
+            </div>
+        </div>
+        <script src="../../js/mui.min.js"></script>
+        <script src=" ../../js/feedback.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript">
+            mui.init();
+            mui('.mui-scroll-wrapper').scroll();
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>法加理-</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <!--标准mui.css-->
+        <link rel="stylesheet" href="../css/mui.min.css">
+        <!--App自定义的css-->
+        <link rel="stylesheet" type="text/css" href="../css/app.css"/>
+    </head>
+    <body>
+        <header class="mui-bar mui-bar-nav bg-lan">
+            <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left col-bai"></a>
+            <h1 class="mui-title col-bai">记录详情</h1>
+        </header>
+        <div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <div class="mui-content">
+                    <ul class="mui-table-view mui-media">
+                            <li class="mui-table-view-cell mui-media">
+                                <div class="mui-media-body">
+                                  <h2 class="col-cheng font20e mui-text-center">- ￥134.00</h2>
+                                <p class="col-cheng font10e mui-text-center"> 处理中</p>
+                                </div>
+                            </li>
+                            <li class="mui-table-view-cell mui-media">订单流水
+                                <span class="mui-pull-right">83252SG345SDG2Q45</span>
+                            </li>
+                            <li class="mui-table-view-cell mui-media">付款方式
+                                <span class="mui-pull-right">我的钱包</span>
+                            </li>
+                            <li class="mui-table-view-cell mui-media">消费说明
+                                <span class="mui-pull-right">咨询消费</span>
+                            </li>
+                            <li class="mui-table-view-cell mui-media">消费时间
+                                <span class="mui-pull-right">10-19  12:23</span>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+        <script src="../js/mui.min.js"></script>
+        <script>
+            mui.init({
+                swipeBack: false,
+            });
+             //主界面和侧滑菜单界面均支持区域滚动；
+            mui('#offCanvasContentScroll').scroll();
+
+        </script>
+    </body>
+
+</html>

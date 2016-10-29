@@ -30,9 +30,9 @@
                         <p class="price">￥86.00/小时</p>
                         <p class="map mui-ellipsis"><span class="mui-icon mui-icon-location font12e col-cheng"></span>广东·广州</p>
                         <div class="padding40">
-                            <a id='confirmBtn' class="mui-btn mui-btn-blue padding2" href="">我要咨询</a>
-                            <a class="mui-btn mui-btn-blue padding2 mui-btn-outlined" href="">留言板</a>
-                            <a class="mui-btn mui-btn-blue padding2 mui-btn-outlined" href="">律师订单</a>
+                            <a class="mui-btn mui-btn-blue padding2" href="MeConsultInput.html">我要咨询</a>
+                            <a class="mui-btn mui-btn-blue padding2 mui-btn-outlined" href="Message.html">留言板</a>
+                            <a class="mui-btn mui-btn-blue padding2 mui-btn-outlined" href="LawyerOrders.html">律师订单</a>
                         </div>
                         <span class="collect">
                             <i class="mui-icon iconfont font10e">&#xe605;</i>
@@ -158,15 +158,15 @@
     </body>
     <script src="../js/mui.min.js"></script>
     <script>
-        document.getElementById("confirmBtn").addEventListener('tap', function() {
-                var btnArray = ['否', '是'];
-                mui.confirm('您确定要和这个律师咨询？','信息提示',  btnArray, function(e) {
-                    if (e.index == 1) {
-                        mui.toast('你刚刚确认了和这个律师咨询');
-                    } else {
-                        mui.toast('你刚刚取消了和这个律师咨询');
-                    }
-                })
-            });
+        // document.getElementById("confirmBtn").addEventListener('tap', function() {
+        //         var btnArray = ['否', '是'];
+        //         mui.confirm('您确定要和这个律师咨询？','信息提示',  btnArray, function(e) {
+        //             if (e.index == 1) {
+        //                 mui.toast('你刚刚确认了和这个律师咨询');
+        //             } else {
+        //                 mui.toast('你刚刚取消了和这个律师咨询');
+        //             }
+        //         })
+        //     });
     </script>
 </html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>法加理-</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <!--标准mui.css-->
+        <link rel="stylesheet" href="../css/mui.min.css">
+        <!--App自定义的css-->
+        <link rel="stylesheet" type="text/css" href="../css/app.css"/>
+    </head>
+    <body>
+        <header class="mui-bar mui-bar-nav bg-lan">
+            <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left col-bai"></a>
+            <h1 class="mui-title col-bai">法律咨询</h1>
+        </header>
+        <nav class="mui-bar mui-bar-tab" id="mui-menu-box">
+            <a class="mui-menu-item" href="../index.html">
+                <i class="mui-icon iconfont">&#xe610;</i>
+                <span class="mui-tab-label">首页</span>
+            </a>
+            <a class="mui-menu-item" href="../LookingLawyer/index.html">
+                <i class="mui-icon iconfont">&#xe60f;</i>
+                <span class="mui-tab-label">找律师</span>
+            </a>
+            <a class="mui-menu-item mui-active" href="../LegalAdvice/index.html">
+                <i class="mui-icon iconfont">&#xe60d;<span class="mui-badge">9</span></i>
+                <span class="mui-tab-label">法律咨询</span>
+            </a>
+            <a class="mui-menu-item" href="../UserCenter/index.html">
+                <i class="mui-icon iconfont">&#xe600;</i>
+                <span class="mui-tab-label">个人中心</span>
+            </a>
+            <a class="mui-menu-item" href="../MyLawyer/index.html">
+                <i class="mui-icon iconfont">&#xe60b;</i>
+                <span class="mui-tab-label">我的律师</span>
+            </a>
+        </nav>
+        <div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <div class="mui-content">
+
+                </div>
+            </div>
+        </div>
+        <script src="../js/mui.min.js"></script>
+        <script>
+            mui.init({
+                swipeBack: false,
+            });
+             //主界面和侧滑菜单界面均支持区域滚动；
+            mui('#offCanvasContentScroll').scroll();
+
+        </script>
+    </body>
+
+</html>
