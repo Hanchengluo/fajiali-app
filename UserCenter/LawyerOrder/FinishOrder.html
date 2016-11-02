@@ -8,9 +8,9 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <!--标准mui.css-->
-        <link rel="stylesheet" href="../css/mui.min.css">
+        <link rel="stylesheet" href="../../css/mui.min.css">
         <!--App自定义的css-->
-        <link rel="stylesheet" type="text/css" href="../css/app.css"/>
+        <link rel="stylesheet" type="text/css" href="../../css/app.css"/>
     </head>
     <body>
         <header class="mui-bar mui-bar-nav bg-lan">
@@ -20,18 +20,24 @@
         <div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper">
             <div class="mui-scroll">
                 <div class="mui-content">
+                    <div id="OrderStatus" class="mui-clearfix">
+                        <i class="iconfont">&#xe619;</i><span>已评价，谢谢您的建议！</span>
+                    </div>
                     <div class="bg-bai margin-top10 border-t" style="padding-top:1px">
                         <h5 class="mui-content-padded">咨询订单</h5>
                         <hr class="border">
                         <div class="mui-attorney-list">
                             <div class="mui-attorney-top mui-clearfix" style="border: none;">
                                 <div class="user-img">
-                                    <a href="info.html"><img src="../update/userimg01.png" alt=""></a>
+                                    <a href="info.html"><img src="../../update/userimg01.png" alt=""></a>
                                 </div>
                                 <div class="user-info mui-pull-right">
                                     <a href="info.html"><p class="name">郑律师</p></a>
                                     <p class="speciality mui-ellipsis-2">所属事务所：广东金桥百信律师事务所</p>
-                                    <p class="price">订单金额：￥172.00</p>
+                                    <p class="price">定价：￥1809.00</p>
+                                    <div class="padding40">
+                                      <a id="" class="mui-btn mui-btn-blue padding2" href="">查看合同</a>
+                                    </div>
                                     <span class="collect">
                                         <p class="map mui-ellipsis"><span class="mui-icon mui-icon-location font12e col-cheng"></span>广东·广州</p>
                                     </span>
@@ -59,7 +65,7 @@
                                         </tr>
                                         <tr>
                                             <td>支付方式</td>
-                                            <td align="right">我的钱包</td>
+                                            <td align="right">钱包</td>
                                         </tr>
                                         <tr>
                                             <td>交易单号</td>
@@ -70,22 +76,57 @@
                             </div>
                         </div>
                     </div>
-                    <div class="margin10 margin-top10">
-                        <a href="##" id="mui-reply-btn" class="mui-btn mui-btn-primary mui-btn-block" style="padding: 6px 12px;">接听语音留言</a>
-                        <a href="OrderDetails.html" id="mui-reply-btn" class="mui-btn mui-btn-royal mui-btn-block" style="padding: 6px 12px;">马上联系</a>
-                        <h5 class="mui-content-padded mui-text-center col-cheng">请在优好的网络环境下使用APP网络通讯</h5>
-                        <a href="../UserCenter/ConsultingOrder/ConsultingOrderFinish.html" id="mui-reply-btn" class="mui-btn mui-btn-success mui-btn-block" style="padding: 6px 12px;">完成咨询</a>
+                    <div class="cgzf-info margin-top10">
+                        <div class="spxx-shop">
+                            <div class=" mlr-pm">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                        <tr>
+                                            <td>评价时间</td>
+                                            <td align="right">2016-09-09 13:50:13</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">郑律师服务态度很好！还跟我讲了一些法律注意事项</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">评价星级：<div class="icons mui-inline"><i data-index="1" class="font14e mui-icon mui-icon-star-filled"></i><i data-index="2" class="font14e mui-icon mui-icon-star-filled"></i><i data-index="3" class="font14e mui-icon mui-icon-star-filled"></i><i data-index="4" class="font14e mui-icon mui-icon-star-filled"></i><i data-index="5" class="font14e mui-icon mui-icon mui-icon-starhalf"></i></div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cgzf-info margin-top10">
+                        <div class="spxx-shop">
+                            <div class=" mlr-pm">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                        <tr class="border-b">
+                                            <td colspan="2"><span class="col-hui">订单工作日志</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-b" colspan="2">2016-09-16 <br>提交资料给广州越秀区法庭</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-b" colspan="2">2016-09-15 <br>与客户核对上诉资料，整理上诉提交资料保释客户，提交保释款</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-b" colspan="2">2016-09-14 <br>与客户核对上诉资料，整理上诉提交资料保释客户，提交保释款</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <script src="../js/mui.min.js"></script>
+        <script src="../../js/mui.min.js"></script>
         <script>
             mui.init({
                 swipeBack: false,
             });
             mui('#offCanvasContentScroll').scroll();
-
         </script>
     </body>
 

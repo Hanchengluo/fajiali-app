@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>法加理-</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <!--标准mui.css-->
+        <link rel="stylesheet" href="../../css/mui.min.css">
+        <link rel="stylesheet" href="../../css/feedback.css">
+        <link rel="stylesheet" href="../../css/swiper.min.css">
+        <!--App自定义的css-->
+        <link rel="stylesheet" type="text/css" href="../../css/app.css"/>
+    </head>
+    <body>
+        <header class="mui-bar mui-bar-nav bg-lan">
+            <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left col-bai"></a>
+            <h1 class="mui-title col-bai">冻结订单</h1>
+        </header>
+        <div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <div class="mui-content feedback">
+                    <div class="cgzf-info margin-top10">
+                      <div class="spxx-shop">
+                        <div class=" mlr-pm">
+                          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tbody>
+                                <tr>
+                                <td>订单号</td>
+                                <td align="right">HSH20912037</td>
+                              </tr>
+                              <tr>
+                                <td>商   品</td>
+                                <td align="right">律师咨询</td>
+                              </tr>
+                              <tr>
+                                <td>交易时间</td>
+                                <td align="right">2015-12-16 22：41：45</td>
+                              </tr>
+                              <tr>
+                                <td>交易单号</td>
+                                <td align="right">1205329821521545465665855444</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mui-input-row margin-top10 border-t border-b">
+                        <textarea id="question" class="mui-input-clear question" placeholder="请详细描述你的问题和意见..."></textarea>
+                    </div>
+                    <p>上传相关证明照片</p>
+                    <div id="image-list" class="row image-list margin-top10 border-t border-b">
+                        <input type="file" class="update-img">
+                        <div class="image-item space"><div class="image-close">X</div><div class="image-up"></div><div class="file" id="image-1"></div></div>
+                    </div>
+                    <!-- 以下代码是用于上传图片之后显示图片的 -->
+                    <!-- <div id="update-end" class="padding10 margin-top10 bg-bai mui-clearfix border-t border-b">
+                        <img src="../../update/lawyer2.jpg">
+                        <img src="../../update/lawyer2.jpg">
+                    </div> -->
+                    <p>选择仲裁人</p>
+                    <div id="mui-vote-box" class="swiper-container margin-top10 bg-bai padding10">
+                        <div class="swiper-wrapper font08e">
+                            <div class="swiper-slide">
+                                <img src="../../update/lawyer1.jpg" alt="">
+                                <div class="mui-vote-checkbox mui-checkbox">
+                                    <label>郑律师</label>
+                                    <input style="left: 0;" name="checkbox" value="Item 1" type="checkbox" >
+                                </div>
+                            </div>
+                            <div class="swiper-slide"><img src="../../update/lawyer2.jpg" alt=""><div class="mui-vote-checkbox mui-checkbox">
+                                    <label>郑律师</label>
+                                    <input style="left: 0;" name="checkbox" value="Item 1" type="checkbox" >
+                                </div></div>
+                            <div class="swiper-slide"><img src="../../update/lawyer3.jpg" alt=""><div class="mui-vote-checkbox mui-checkbox">
+                                    <label>郑律师</label>
+                                    <input style="left: 0;" name="checkbox" value="Item 1" type="checkbox" >
+                                </div></div>
+                            <div class="swiper-slide"><img src="../../update/lawyer1.jpg" alt=""><div class="mui-vote-checkbox mui-checkbox">
+                                    <label>郑律师</label>
+                                    <input style="left: 0;" name="checkbox" value="Item 1" type="checkbox" >
+                                </div></div>
+                            <div class="swiper-slide"><img src="../../update/lawyer2.jpg" alt=""><div class="mui-vote-checkbox mui-checkbox">
+                                    <label>郑律师</label>
+                                    <input style="left: 0;" name="checkbox" value="Item 1" type="checkbox" >
+                                </div></div>
+                            <div class="swiper-slide"><img src="../../update/lawyer3.jpg" alt=""><div class="mui-vote-checkbox mui-checkbox">
+                                    <label>郑律师</label>
+                                    <input style="left: 0;" name="checkbox" value="Item 1" type="checkbox" >
+                                </div></div>
+                        </div>
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                    <div class="margin10 margin-top10">
+                      <a href="FreezeOrderEnd.html" id="mui-reply-btn" class="mui-btn mui-btn-primary mui-btn-block" style="padding: 6px 12px;">冻结订单</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../../js/mui.min.js"></script>
+        <script src="../../js/swiper.min.js"></script>
+        <script>
+            mui.init({
+                swipeBack: false,
+            });
+             //主界面和侧滑菜单界面均支持区域滚动；
+            mui('#offCanvasContentScroll').scroll();
+
+        </script>
+        <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 3,
+            paginationClickable: true,
+            spaceBetween: 10,
+            scrollbar: '.swiper-scrollbar',
+        });
+        </script>
+    </body>
+
+</html>

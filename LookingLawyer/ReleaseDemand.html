@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>法加理-</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <!--标准mui.css-->
+        <link rel="stylesheet" type="text/css" href="../css/mui.min.css" />
+        <link rel="stylesheet" href="../css/swiper.min.css">
+        <link href="../css/mui.picker.css" rel="stylesheet" />
+        <link href="../css/mui.poppicker.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="../css/app.css">
+    </head>
+    <body>
+        <header class="mui-bar mui-bar-nav bg-lan">
+            <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left col-bai"></a>
+            <h1 class="mui-title col-bai">发布合作需求</h1>
+        </header>
+        <div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <div class="mui-content bg-bai padding-top10 margin-top10 border-t border-b">
+                    <div class="margin-top10 margin10">
+                        <input type="text" style="margin-bottom: 0;" placeholder="案件标题">
+                    </div>
+                    <div class="margin-top10 margin10">
+                        <button id='showUserPicker' class="mui-btn mui-btn-block mui-text-left" type='button' style="padding:6px 10px;">案件类型</button>
+                    </div>
+                    <div class="margin-top10 margin10">
+                        <button id='showCityPicker3' class="mui-btn mui-btn-block mui-text-left" type='button' style="padding:6px 10px">案件地区</button>
+                        <div id='cityResult3' class="ui-alert"></div>
+                    </div>
+                    <div class="mui-table-view-cell mui-radio mui-left">
+                      <input name="radio2" type="radio">带价投标
+                    </div>
+                    <div class="mui-table-view-cell mui-radio mui-left">
+                      <input name="radio2" type="radio">固定金额
+                    </div>
+                    <div class="margin-top10 margin10">
+                        <input type="text" style="margin-bottom: 0;" placeholder="固定的金额">
+                    </div>
+                    <div class="margin-top10 margin10">
+                        <button id='showUserPicker1' class="mui-btn mui-btn-block mui-text-left" type='button' style="padding:6px 10px;">加急程度</button>
+                    </div>
+                    <div class="margin-top10 margin10">
+                        <input type="text" style="margin-bottom: 0;" placeholder="联系人称呼">
+                    </div>
+                    <div class="margin-top10 margin10">
+                        <input type="text" style="margin-bottom: 0;" placeholder="联系电话">
+                    </div>
+                    <div class="row mui-input-row margin10 margin-top10">
+                        <textarea id="question" class="mui-input-clear question" placeholder="请输入案件具体描述，限500字数" style="height: 100px;margin-bottom: 0;"></textarea>
+                    </div>
+                    <div class="margin10 margin-top10">
+                        <a href="MyMessageList.html" id="mui-reply-btn" class="mui-btn mui-btn-primary mui-btn-block" style="padding: 6px 12px;">发布合作需求</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../js/mui.min.js"></script>
+        <script src="../js/mui.picker.js"></script>
+        <script src="../js/mui.poppicker.js"></script>
+        <script>
+            mui.init({
+                swipeBack: false,
+            });
+             //主界面和侧滑菜单界面均支持区域滚动；
+            mui('#offCanvasContentScroll').scroll();
+
+        </script>
+
+        <script src="../js/city.data.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../js/city.data-3.js" type="text/javascript" charset="utf-8"></script>
+                <script>
+            (function($, doc) {
+                $.init();
+                $.ready(function() {
+                    //普通示例
+                    var userPicker = new $.PopPicker();
+                    userPicker.setData([{
+                        value: '1',
+                        text: '民事类'
+                    }, {
+                        value: '2',
+                        text: '刑事类'
+                    }]);
+                    var showUserPickerButton = doc.getElementById('showUserPicker');
+                    var userResult = doc.getElementById('showUserPicker');
+                    showUserPickerButton.addEventListener('tap', function(event) {
+                        userPicker.show(function(selectItems) {
+                            userResult.innerText = selectItems[0].text;
+                            // userResult.innerText = selectItems[0].value;
+                            //返回 false 可以阻止选择框的关闭
+                            //return false;
+                        });
+                    }, false);
+                });
+            })(mui, document);
+        </script>
+                <script>
+            (function($, doc) {
+                $.init();
+                $.ready(function() {
+                    //普通示例
+                    var userPicker = new $.PopPicker();
+                    userPicker.setData([{
+                        value: '1',
+                        text: '一般'
+                    }, {
+                        value: '2',
+                        text: '紧急'
+                    }]);
+                    var showUserPickerButton = doc.getElementById('showUserPicker1');
+                    var userResult = doc.getElementById('showUserPicker1');
+                    showUserPickerButton.addEventListener('tap', function(event) {
+                        userPicker.show(function(selectItems) {
+                            userResult.innerText = selectItems[0].text;
+                            // userResult.innerText = selectItems[0].value;
+                            //返回 false 可以阻止选择框的关闭
+                            //return false;
+                        });
+                    }, false);
+                });
+            })(mui, document);
+        </script>
+        <script>
+            (function($, doc) {
+                $.init();
+                $.ready(function() {
+                    //-----------------------------------------
+                    //                  //级联示例
+                    var cityPicker3 = new $.PopPicker({
+                        layer: 3
+                    });
+                    cityPicker3.setData(cityData3);
+                    var showCityPickerButton = doc.getElementById('showCityPicker3');
+                    var cityResult3 = doc.getElementById('showCityPicker3');
+                    showCityPickerButton.addEventListener('tap', function(event) {
+                        cityPicker3.show(function(items) {
+                            cityResult3.innerText = (items[0] || {}).text + " " + (items[1] || {}).text + " " + (items[2] || {}).text;
+                            //返回 false 可以阻止选择框的关闭
+                            //return false;
+                        });
+                    }, false);
+                });
+            })(mui, document);
+        </script>
+    </body>
+
+</html>

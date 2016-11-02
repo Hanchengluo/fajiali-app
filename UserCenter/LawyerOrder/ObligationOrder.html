@@ -21,12 +21,8 @@
             <div class="mui-scroll">
                 <div class="mui-content">
                     <div id="OrderStatus" class="mui-clearfix">
-                        <i class="iconfont">&#xe626;</i><span>状态：待确认</span>
+                        <i class="iconfont">&#xe619;</i><span>状态：未付款</span>
                     </div>
-                    <!-- 一下代码是用于其他订单状态时候的图标
-                    <div id="OrderStatus" class="mui-clearfix">
-                        <i class="iconfont">&#xe619;</i><span>状态：等待律师确认</span>
-                    </div> -->
                     <div class="bg-bai margin-top10 border-t" style="padding-top:1px">
                         <h5 class="mui-content-padded">咨询订单</h5>
                         <hr class="border">
@@ -38,13 +34,18 @@
                                 <div class="user-info mui-pull-right">
                                     <a href="info.html"><p class="name">郑律师</p></a>
                                     <p class="speciality mui-ellipsis-2">所属事务所：广东金桥百信律师事务所</p>
-                                    <p class="price">订单金额：￥172.00</p>
+                                    <p class="price">定价：￥1809.00</p>
                                     <span class="collect">
                                         <p class="map mui-ellipsis"><span class="mui-icon mui-icon-location font12e col-cheng"></span>广东·广州</p>
                                     </span>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="margin-top10">
+                        <ul class="mui-table-view">
+                            <li class="mui-table-view-cell mui-text-center col-cheng"><a  href="tel:13420003000" >咨询电话：<i class="iconfont">&#xe604;</i>13420003000</a></li>
+                        </ul>
                     </div>
                     <div class="cgzf-info margin-top10">
                         <div class="spxx-shop">
@@ -60,6 +61,10 @@
                                             <td align="right">2015-12-16 22：41：45</td>
                                         </tr>
                                         <tr>
+                                            <td>支付方式</td>
+                                            <td align="right">未支付</td>
+                                        </tr>
+                                        <tr>
                                             <td>交易单号</td>
                                             <td align="right">1205329821521545465665855444</td>
                                         </tr>
@@ -69,7 +74,8 @@
                         </div>
                     </div>
                     <div class="margin10 margin-top10">
-                        <a href="" id="mui-reply-btn" class="mui-btn mui-btn-primary mui-btn-block" style="padding: 6px 12px;">马上确认</a>
+                        <a href="##" id="mui-reply-btn" class="mui-btn mui-btn-primary mui-btn-block" style="padding: 6px 12px;">马上联系</a>
+                        <a id="promptBtn" class="mui-btn mui-btn-royal mui-btn-block" style="padding: 6px 12px;">重新定价</a>
                     </div>
                 </div>
             </div>
@@ -79,9 +85,18 @@
             mui.init({
                 swipeBack: false,
             });
-             //主界面和侧滑菜单界面均支持区域滚动；
             mui('#offCanvasContentScroll').scroll();
-
+            document.getElementById("promptBtn").addEventListener('tap', function(e) {
+                e.detail.gesture.preventDefault(); //修复iOS 8.x平台存在的bug，使用plus.nativeUI.prompt会造成输入法闪一下又没了
+                var btnArray = ['取消', '确定'];
+                mui.prompt('请在电脑端系统编辑上传合同', '整数价格', '消息提示', btnArray, function(e) {
+                    if (e.index == 1) {
+                        mui.toast('你提交的价格是：'+ e.value);
+                    } else {
+                        mui.toast('你点了取消按钮');
+                    }
+                })
+            });
         </script>
     </body>
 

@@ -8,10 +8,10 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <!--标准mui.css-->
-        <link rel="stylesheet" href="../../css/mui.min.css">
-        <link rel="stylesheet" href="../../css/swiper.min.css">
+        <link rel="stylesheet" href="../css/mui.min.css">
+        <link rel="stylesheet" href="../css/swiper.min.css">
         <!--App自定义的css-->
-        <link rel="stylesheet" type="text/css" href="../../css/app.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/app.css"/>
         <style>
             .mui-attorney-list .mui-attorney-top{
                 padding-bottom: 0;
@@ -25,23 +25,23 @@
             <h1 class="mui-title col-bai">订单中心</h1>
         </header>
         <nav class="mui-bar mui-bar-tab" id="mui-menu-box">
-            <a class="mui-menu-item" href="../../index.html">
+            <a class="mui-menu-item" href="../index.html">
                 <i class="mui-icon iconfont">&#xe610;</i>
                 <span class="mui-tab-label">首页</span>
             </a>
-            <a class="mui-menu-item" href="../../LookingLawyer/index.html">
+            <a class="mui-menu-item" href="../LookingLawyer/index.html">
                 <i class="mui-icon iconfont">&#xe629;</i>
                 <span class="mui-tab-label">找合作</span>
             </a>
-            <a class="mui-menu-item" href="../../LegalAdvice/index.html">
+            <a class="mui-menu-item" href="../LegalAdvice/index.html">
                 <i class="mui-icon iconfont">&#xe60d;<span class="mui-badge">9</span></i>
                 <span class="mui-tab-label">法律咨询</span>
             </a>
-            <a class="mui-menu-item mui-active" href="../../UserCenter/OrdersCentre.html">
+            <a class="mui-menu-item mui-active" href="../UserCenter/OrdersCentre.html">
                 <i class="mui-icon iconfont">&#xe623;</i>
                 <span class="mui-tab-label">订单中心</span>
             </a>
-            <a class="mui-menu-item" href="../../MyLawyer/index.html">
+            <a class="mui-menu-item" href="../MyLawyer/index.html">
                 <i class="mui-icon iconfont">&#xe60b;</i>
                 <span class="mui-tab-label">我的客户</span>
             </a>
@@ -51,24 +51,25 @@
                 <div class="mui-content">
                     <div id="mui-news-tabs" class="swiper-container bg-bai">
                         <div class="swiper-wrapper font08e">
-                            <div class="swiper-slide"><a href="../OrdersCentre.html">咨询订单<span class="mui-pull-right">|</span></a></div>
-                            <div class="swiper-slide"><a  class="mui-active"  href="index.html">委托订单<span class="mui-pull-right">|</span></a></div>
-                            <div class="swiper-slide"><a href="../ArbitrationOrder/index.html">合作订单</a></div>
+                            <div class="swiper-slide"><a href="OrdersCentre.html" class="mui-active" href="OrdersCentre.html">咨询订单<span class="mui-pull-right">|</span></a></div>
+                            <div class="swiper-slide"><a href="LawyerOrder/index.html">委托订单<span class="mui-pull-right">|</span></a></div>
+                            <div class="swiper-slide"><a href="ArbitrationOrder/index.html">合作订单</a></div>
                         </div>
                     </div>
                     <div class="mui-attorney-list bg-bai margin-top10 border-t">
                         <div class="mui-attorney-top mui-clearfix" style="border:none">
                             <div class="user-img">
-                                <a href="FinishOrder.html"><img src="../../update/userimg01.png" alt=""></a>
+                                <a href="ConsultingOrder/OrderDetail.html"><img src="../update/userimg01.png" alt=""></a>
                             </div>
                             <div class="user-info mui-pull-right">
-                                <a href="FinishOrder.html"><p class="name">郑律师12</p></a>
+                                <a href="ConsultingOrder/OrderDetail.html"><p class="name">郑律师1</p></a>
                                 <p class="speciality mui-ellipsis-2">广东金桥百信律师事务所</p>
                                 <p class="speciality mui-ellipsis-2">￥86.00/小时 x2</p>
                                 <div class="padding40">
+                                    <a id="confirmBtn" class="mui-btn mui-btn-blue padding2 mui-pull-right" href="ConsultingOrder/OrderDetail.html">确认</a>
                                 </div>
                                 <span class="collect  mui-active">
-                                    <span>已完成</span>
+                                    <span>待确认</span>
                                 </span>
                             </div>
                         </div>
@@ -76,17 +77,14 @@
                     <div class="mui-attorney-list bg-bai margin-top10 border-t">
                         <div class="mui-attorney-top mui-clearfix" style="border:none">
                             <div class="user-img">
-                                <a href="ConfirmOrder.html"><img src="../../update/userimg01.png" alt=""></a>
+                                <a href="ConsultingOrder/OrderDetail.html"><img src="../update/userimg01.png" alt=""></a>
                             </div>
                             <div class="user-info mui-pull-right">
-                                <a href="ConfirmOrder.html"><p class="name">郑律师2</p></a>
+                                <a href="ConsultingOrder/OrderDetail.html"><p class="name">郑律师2</p></a>
                                 <p class="speciality mui-ellipsis-2">广东金桥百信律师事务所</p>
                                 <p class="speciality mui-ellipsis-2">￥86.00/小时 x2</p>
-                                <div class="padding40">
-                                    <a id="" class="mui-btn mui-btn-blue padding2 mui-pull-right margin-right4" href="ConfirmOrder.html">确认定价</a>
-                                </div>
                                 <span class="collect  mui-active">
-                                    <span>待律师确认</span>
+                                    <span>未付款</span>
                                 </span>
                             </div>
                         </div>
@@ -94,17 +92,17 @@
                     <div class="mui-attorney-list bg-bai margin-top10 border-t">
                         <div class="mui-attorney-top mui-clearfix" style="border:none">
                             <div class="user-img">
-                                <a href="ObligationOrder.html"><img src="../../update/userimg01.png" alt=""></a>
+                                <a href="../LookingLawyer/OrderDetails.html"><img src="../update/userimg01.png" alt=""></a>
                             </div>
                             <div class="user-info mui-pull-right">
-                                <a href="ObligationOrder.html"><p class="name">郑律师</p></a>
+                                <a href="../LookingLawyer/OrderDetails.html"><p class="name">郑律师</p></a>
                                 <p class="speciality mui-ellipsis-2">广东金桥百信律师事务所</p>
                                 <p class="speciality mui-ellipsis-2">￥86.00/小时 x2</p>
                                 <div class="padding40">
-                                    <a id="" class="mui-btn mui-btn-blue padding2 mui-pull-right margin-right4" href="">查看合同</a>
+                                    <a id="confirmBtn" class="mui-btn mui-btn-blue padding2 mui-pull-right" href="../LookingLawyer/OrderDetails.html">完成</a>
                                 </div>
                                 <span class="collect  mui-active">
-                                    <span>待审核</span>
+                                    <span>未完成</span>
                                 </span>
                             </div>
                         </div>
@@ -112,35 +110,17 @@
                     <div class="mui-attorney-list bg-bai margin-top10 border-t">
                         <div class="mui-attorney-top mui-clearfix" style="border:none">
                             <div class="user-img">
-                                <a href="UnfinishedOrder.html"><img src="../../update/userimg01.png" alt=""></a>
+                                <a href="../LookingLawyer/OrderDetails.html"><img src="../update/userimg01.png" alt=""></a>
                             </div>
                             <div class="user-info mui-pull-right">
-                                <a href="UnfinishedOrder.html"><p class="name">郑律师</p></a>
+                                <a href="../LookingLawyer/OrderDetails.html"><p class="name">郑律师12</p></a>
                                 <p class="speciality mui-ellipsis-2">广东金桥百信律师事务所</p>
                                 <p class="speciality mui-ellipsis-2">￥86.00/小时 x2</p>
                                 <div class="padding40">
-                                    <a id="confirmBtn" class="mui-btn mui-btn-blue padding2 mui-pull-right" href="FreezeOrder.html">冻结</a>
+                                    <a id="confirmBtn" class="mui-btn mui-btn-blue padding2 mui-pull-right" href="../LookingLawyer/OrderDetails.html">完成</a>
                                 </div>
                                 <span class="collect  mui-active">
-                                    <span>待完成</span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mui-attorney-list bg-bai margin-top10 border-t">
-                        <div class="mui-attorney-top mui-clearfix" style="border:none">
-                            <div class="user-img">
-                                <a href="../ConsultingOrder/OrderDetail.html"><img src="../../update/userimg01.png" alt=""></a>
-                            </div>
-                            <div class="user-info mui-pull-right">
-                                <a href="../ConsultingOrder/OrderDetail.html"><p class="name">郑律师</p></a>
-                                <p class="speciality mui-ellipsis-2">广东金桥百信律师事务所</p>
-                                <p class="speciality mui-ellipsis-2">￥86.00/小时 x2</p>
-                                <div class="padding40">
-                                    <a id="confirmBtn" class="mui-btn mui-btn-blue padding2 mui-pull-right" href="">申请仲裁</a>
-                                </div>
-                                <span class="collect  mui-active">
-                                    <span>已冻结</span>
+                                    <span>已咨询</span>
                                 </span>
                             </div>
                         </div>
@@ -151,16 +131,17 @@
                 </div>
             </div>
         </div>
-        <script src="../../js/mui.min.js"></script>
-        <script src="../../js/swiper.min.js"></script>
+        <script src="../js/mui.min.js"></script>
+        <script src="../js/swiper.min.js"></script>
         <script>
             mui.init({
                 swipeBack: false,
             });
              //主界面和侧滑菜单界面均支持区域滚动；
+            mui('#offCanvasSideScroll').scroll();
             mui('#offCanvasContentScroll').scroll();
         </script>
-         <script>
+        <script>
         var swiper = new Swiper('.swiper-container', {
             slidesPerView: 3,
             spaceBetween: 0,
