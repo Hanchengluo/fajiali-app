@@ -1300,18 +1300,10 @@ color: #063062;
     color: #fff;
     border-radius: 5px;
     font-size: 14px;
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    margin-left: -25%;
 }
 .use-tips{
-    position: absolute;
-    top: 45%;
     color: #ff6600;
     padding: 8px 45px;
-    left: 50%;
-    margin-left: -25%;
     border-bottom: 2px solid #ff6600;
 }
 .coupon-rules{
