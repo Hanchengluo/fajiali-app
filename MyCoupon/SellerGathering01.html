@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>法加理-</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <!--标准mui.css-->
+        <link rel="stylesheet" href="../css/mui.min.css">
+        <!--App自定义的css-->
+        <link rel="stylesheet" type="text/css" href="../css/app.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/payment.css"/>
+    </head>
+
+    <body>
+        <header class="mui-bar mui-bar-nav bg-lan" style="z-index:999">
+            <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left col-bai"></a>
+            <h1 class="mui-title col-bai">商家收款</h1>
+            <a href="ProduceCode.html" class=" mui-icon  mui-icon-right-nav col-bai fr"><i class="icon iconfont f20">&#xe631;</i></a>
+        </header>
+        <div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <div class="mui-content">
+                    <div class="margin-top10 margin10">
+                        <input type="text" style="margin-bottom: 0;" placeholder="请输入收款码">
+                    </div>
+                    <div class="margin10 margin-top10">
+                        <a href="SellerGathering02.html" id="mui-reply-btn" class="mui-btn mui-btn-primary mui-btn-block" style="padding: 6px 12px;">确认</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="../js/mui.min.js"></script>
+    <script>
+        mui.init({
+            swipeBack: true //启用右滑关闭功能
+        });
+    </script>
+</html>

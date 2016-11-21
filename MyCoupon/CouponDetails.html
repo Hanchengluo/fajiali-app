@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>法加理-</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <!--标准mui.css-->
+        <link rel="stylesheet" href="../css/mui.min.css">
+        <!--App自定义的css-->
+        <link rel="stylesheet" type="text/css" href="../css/app.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/payment.css"/>
+    </head>
+
+    <body>
+        <header class="mui-bar mui-bar-nav bg-lan" style="z-index:999">
+            <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left col-bai"></a>
+            <h1 class="mui-title col-bai">优惠券详情</h1>
+        </header>
+        <div class="mui-content mui-row mui-fullscreen">
+            <div class="CouponDetails">
+                <div class="coupon-area">
+                    <div class="amount"><p>100元</p><span>现金券</span></div>
+                    <a class="btn-get">登录领取</a>
+                    <div class="use-tips">使用说明>></div>
+                    <div class="coupon-rules">
+                        <h4>优惠券规则</h4>
+                        <p>1、每人最多只可领取一张；</p>
+                        <p>2、此优惠券有效期为2016年12月8日；</p>
+                        <p>3、此优惠券不可兑换成现金；</p>
+                        <p>4、该活动的解释权在法律规定的范围内归本公司所有。</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </body>
+    <script src="../js/mui.min.js"></script>
+    <script>
+        mui.init({
+            swipeBack: true //启用右滑关闭功能
+        });
+    </script>
+</html>

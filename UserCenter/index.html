@@ -9,6 +9,7 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
         <link rel="stylesheet" href="../css/mui.min.css">
+        <link rel="stylesheet" href="../css/swiper.min.css">
         <link rel="stylesheet" type="text/css" href="../css/feedback.css" />
         <link rel="stylesheet" href="../css/app.css">
         <style>
@@ -71,6 +72,9 @@
                         <ul class="mui-table-view mui-table-view-chevron">
                             <li class="mui-table-view-cell">
                                 <a href="#MyWallet" class="mui-navigate-right"><i class="icon iconfont col-menu1 margin-right4">&#xe61c;</i>我的钱包</a>
+                            <li class="mui-table-view-cell">
+                                <a href="#MyCoupon" class="mui-navigate-right"><i class="icon iconfont col-menu1 margin-right4">&#xe69b;</i>我的优惠券</a>
+                            </li>
                             <li class="mui-table-view-cell">
                                 <a href="#MyMessage" class="mui-navigate-right"><i class="icon iconfont col-menu1 margin-right4">&#xe614;</i>我的留言</a>
                             </li>
@@ -638,6 +642,63 @@
             </div>
         </div>
         <!-- 我的钱包页面结束 -->
+        <!-- 我的优惠券页面开始 -->
+        <div id="MyCoupon" class="mui-page">
+            <div class="mui-navbar-inner mui-bar mui-bar-nav">
+                <button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+                    <span class="mui-icon mui-icon-left-nav"></span>
+                </button>
+                <h1 class="mui-center mui-title">我的优惠券</h1>
+            </div>
+            <div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <div id="mui-news-tabs" class="swiper-container bg-bai">
+                        <div class="swiper-wrapper font08e">
+                            <div class="swiper-slide" style="width: 33.3%;"><a href="#" class="mui-active" href="index.html">未使用<span class="mui-pull-right">|</span></a></div>
+                            <div class="swiper-slide" style="width: 33.3%;"><a href="#">已使用<span class="mui-pull-right">|</span></a></div>
+                            <div class="swiper-slide" style="width: 33.3%;"><a href="#">已过期</a></div>
+                        </div>
+                    </div>
+                    <div class="coupon-list coupon-list-use">
+                        <div class="c-price"  style="float:left">
+                            <span>70<i>%</i></span>
+                            <p style=" margin-bottom:0;">折扣券</p>
+                        </div> 
+                        <div class="c-info">
+                            <div class="c-info-name">白云宾馆住房优惠券</div>
+                            <p style="margin-bottom:0;">使用期限：</p>
+                            <p style="margin-bottom:0;">2016年11月8日-2016年12月8日</p>
+                        </div>
+                        <a class="btn-use" >立即<br>使用</a>
+                    </div>
+                    <div class="coupon-list coupon-list-none">
+                        <div class="c-price"  style="float:left">
+                            <span>70<i>%</i></span>
+                            <p style=" margin-bottom:0;">折扣券</p>
+                        </div> 
+                        <div class="c-info">
+                            <div class="c-info-name">白云宾馆住房优惠券</div>
+                            <p style="margin-bottom:0;">使用期限：</p>
+                            <p style="margin-bottom:0;">2016年11月8日-2016年12月8日</p>
+                        </div>
+                        <a class="btn-use" >已经<br>使用</a>
+                    </div>
+                    <div class="coupon-list coupon-list-none">
+                        <div class="c-price"  style="float:left">
+                            <span>70<i>%</i></span>
+                            <p style=" margin-bottom:0;">折扣券</p>
+                        </div> 
+                        <div class="c-info">
+                            <div class="c-info-name">白云宾馆住房优惠券</div>
+                            <p style="margin-bottom:0;">使用期限：</p>
+                            <p style="margin-bottom:0;">2016年11月8日-2016年12月8日</p>
+                        </div>
+                        <a class="btn-use" >已经<br>过期</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 我的优惠券页面结束 -->
         <!-- 意见反馈页面开始 -->
         <div id="feedback" class="mui-page feedback">
             <div class="mui-navbar-inner mui-bar mui-bar-nav">
@@ -707,6 +768,21 @@
     <script src="../js/mui.min.js "></script>
     <script src="../js/mui.view.js "></script>
     <script src='../js/feedback.js'></script>
+    <script>
+        mui.init({
+            swipeBack: false,
+        });
+         //主界面和侧滑菜单界面均支持区域滚动；
+        mui('#offCanvasSideScroll').scroll();
+        mui('#offCanvasContentScroll').scroll();
+
+    </script><script>
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 3,
+        spaceBetween: 0,
+        freeMode: true
+    });
+    </script>
     <script>
         mui.init();
         //初始化单页view

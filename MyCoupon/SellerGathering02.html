@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>法加理-</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <!--标准mui.css-->
+        <link rel="stylesheet" href="../css/mui.min.css">
+        <!--App自定义的css-->
+        <link rel="stylesheet" type="text/css" href="../css/app.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/payment.css"/>
+    </head>
+
+    <body>
+        <header class="mui-bar mui-bar-nav bg-lan" style="z-index:999">
+            <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left col-bai"></a>
+            <h1 class="mui-title col-bai">商家收款</h1>
+        </header>
+        <div class="nav-amount mui-bar f18">
+            <div class="fl">总金额:<span>￥358</span></div>
+            <a href="" class="mui-btn mui-btn-blue padding2 fr">收款</a>
+        </div>
+        <div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <div class="mui-content">
+                    <div class="margin-top10 margin10">
+                        <input type="text" style="margin-bottom: 0;" placeholder="请输入消费金额">
+                    </div>
+                </div>
+                <div class="coupon-info">
+                    <div class="coupon-info-title">100元现金券<span>白云宾馆住房优惠券</span></div>
+                    <div>
+                    <p>使用期限：</p>
+                    <p>2016年11月8日—2016年12月8日</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="../js/mui.min.js"></script>
+    <script>
+        mui.init({
+            swipeBack: true //启用右滑关闭功能
+        });
+    </script>
+</html>
