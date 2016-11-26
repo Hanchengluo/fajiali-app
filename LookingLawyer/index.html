@@ -1,185 +1,469 @@
+
 <!DOCTYPE html>
 <html>
 
     <head>
         <meta charset="utf-8">
-        <title>法加理-</title>
+        <title>法加理个人中心</title>
         <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-        <!--标准mui.css-->
         <link rel="stylesheet" href="../css/mui.min.css">
-        <!--App自定义的css-->
-        <link rel="stylesheet" type="text/css" href="../css/app.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/feedback.css" />
+        <link rel="stylesheet" href="../css/app.css">
+        <style>
+            .mui-table-view {
+                margin-top: 10px;
+            }
+            .head-img{
+                border-radius: 4px;
+            }
+            .sideslip-page .mui-row, .sideslip-page .mui-scroll {
+                height: 100%;
+            }
+
+            .sideslip-page .mui-col-xs-4,
+            .sideslip-page .mui-col-xs-8 {
+                overflow-y: auto;
+                height: 100%;
+            }
+
+            .sideslip-page  .mui-segmented-control .mui-control-item {
+                line-height: 50px;
+                width: 100%;
+            }
+
+            .sideslip-page .mui-control-content {
+                display: block;
+            }
+
+            .sideslip-page .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+                background-color: #fff;
+            }
+        </style>
     </head>
 
-    <body>
-        <header class="mui-bar mui-bar-nav bg-lan" style="box-shadow: none;">
-            <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left col-bai"></a>
-            <h1 class="mui-title col-bai">找律师</h1>
-        </header>
-        <nav class="mui-bar mui-bar-tab" id="mui-menu-box">
-            <a class="mui-menu-item" href="../index.html">
-                <i class="mui-icon iconfont">&#xe610;</i>
-                <span class="mui-tab-label">首页</span>
-            </a>
-            <a class="mui-menu-item mui-active" href="../LookingLawyer/index.html">
-                <i class="mui-icon iconfont">&#xe60f;</i>
-                <span class="mui-tab-label">找律师</span>
-            </a>
-            <a class="mui-menu-item" href="../LegalAdvice/index.html">
-                <i class="mui-icon iconfont">&#xe60d;<span class="mui-badge">9</span></i>
-                <span class="mui-tab-label">法律咨询</span>
-            </a>
-            <a class="mui-menu-item" href="../UserCenter/index.html">
-                <i class="mui-icon iconfont">&#xe600;</i>
-                <span class="mui-tab-label">个人中心</span>
-            </a>
-            <a class="mui-menu-item" href="../MyLawyer/index.html">
-                <i class="mui-icon iconfont">&#xe60b;</i>
-                <span class="mui-tab-label">我的律师</span>
-            </a>
-        </nav>
-        <div class="mui-content">
-            <div class="mui-input-row mui-search  margin-top10 margin10">
-                <input type="search" class="mui-input-clear" placeholder="" style="margin-bottom:10px">
-            </div>
-            <div class="mui-lookinglawyer-tab bg-bai border-t border-b">
-                <ul class=" mui-clearfix">
-                    <li><a href="region.html">广州市<span class="mui-icon mui-icon-arrowdown font10e"></span></a></li>
-                    <li><a href="CaseType.html">刑事<span class="mui-icon mui-icon-arrowdown font10e"></span></a></li>
-                    <li><a href="ObjectType.html">企业<span class="mui-icon mui-icon-arrowdown font10e"></span></a></li>
-                    <li><a href="">评价<span class="mui-icon mui-icon-pulldown font10e"></span></a></li>
-                    <!-- 评价被点击是a标签写入class="mui-active"，如：
-                    <li><a class="mui-active" href="">评价<span class="mui-icon mui-icon-pulldown font10e"></span></a></li> -->
-                </ul>
-            </div>
-            <div class="bg-bai magrin-bottom10">
-                <div class="mui-attorney-list">
-                    <div class="mui-attorney-top mui-clearfix">
-                        <div class="user-img">
-                            <a href="info.html"><img src="../update/userimg01.png" alt=""></a>
-                        </div>
-                        <div class="user-info mui-pull-right">
-                            <a href="info.html"><p class="name">郑律师</p></a>
-                            <p class="price">￥86.00/小时</p>
-                            <p class="speciality mui-ellipsis">专长：合同纠纷  债权债务</p>
-                            <div class="padding40">
-                                <a id='confirmBtn' class="mui-btn mui-btn-blue padding2" href="MeConsultInput.html">我要咨询</a>
-                                <a class="mui-btn mui-btn-blue padding2 mui-btn-outlined" href="Message.html">留言板</a>
-                                <a class="mui-btn mui-btn-blue padding2 mui-btn-outlined" href="">律师订单</a>
-                            </div>
-                            <span class="collect">
-                                <i class="mui-icon iconfont font10e">&#xe605;</i>
-                                <span>收藏</span>
-                            </span>
-                        </div>
-                    </div>
-                    <p class="mui-attorney-bottom attorney-intro"> 郑律师先后毕业于辽宁师范大学、中国政法大学，获理学士、法学士的双学士学位，并在当年荣获“中国政法大学优秀毕业生”称号。郑律师视野开阔、思维活跃、逻辑严密、作风稳健...</p>
+    <body class="mui-fullscreen">
+        <!--页面主结构开始-->
+        <div id="app" class="mui-views">
+            <div class="mui-view">
+                <div class="mui-navbar">
                 </div>
-                <div class="mui-attorney-list">
-                    <div class="mui-attorney-top mui-clearfix">
-                        <div class="user-img">
-                        <img src="../update/userimg01.png" alt="">
-                        </div>
-                        <div class="user-info mui-pull-right">
-                            <p class="name">郑律师</p>
-                            <p class="price">￥86.00/小时</p>
-                            <p class="speciality mui-ellipsis">专长：合同纠纷  债权债务</p>
-                            <div class="padding40">
-                                <a id='confirmBtn' class="mui-btn mui-btn-blue padding2" href="MeConsultInput.html">我要咨询</a>
-                                <a class="mui-btn mui-btn-blue padding2 mui-btn-outlined" href="Message.html">留言板</a>
-                                <a class="mui-btn mui-btn-blue padding2 mui-btn-outlined" href="">律师订单</a>
-                            </div>
-                            <span class="collect">
-                                <i class="mui-icon iconfont font10e">&#xe605;</i>
-                                <span>收藏</span>
-                            </span>
-                        </div>
-                    </div>
-                    <p class="mui-attorney-bottom attorney-intro"> 郑律师先后毕业于辽宁师范大学、中国政法大学，获理学士、法学士的双学士学位，并在当年荣获“中国政法大学优秀毕业生”称号。郑律师视野开阔、思维活跃、逻辑严密、作风稳健...</p>
-                </div>
-                <div class="mui-attorney-list">
-                    <div class="mui-attorney-top mui-clearfix">
-                        <div class="user-img">
-                        <img src="../update/userimg01.png" alt="">
-                        </div>
-                        <div class="user-info mui-pull-right">
-                            <p class="name">郑律师</p>
-                            <p class="price">￥86.00/小时</p>
-                            <p class="speciality mui-ellipsis">专长：合同纠纷  债权债务</p>
-                            <div class="padding40">
-                                <a id='confirmBtn' class="mui-btn mui-btn-blue padding2" href="MeConsultInput.html">我要咨询</a>
-                                <a class="mui-btn mui-btn-blue padding2 mui-btn-outlined" href="Message.html">留言板</a>
-                                <a class="mui-btn mui-btn-blue padding2 mui-btn-outlined" href="">律师订单</a>
-                            </div>
-                            <span class="collect">
-                                <i class="mui-icon iconfont font10e">&#xe605;</i>
-                                <span>收藏</span>
-                            </span>
-                        </div>
-                    </div>
-                    <p class="mui-attorney-bottom attorney-intro"> 郑律师先后毕业于辽宁师范大学、中国政法大学，获理学士、法学士的双学士学位，并在当年荣获“中国政法大学优秀毕业生”称号。郑律师视野开阔、思维活跃、逻辑严密、作风稳健...</p>
-                </div>
-                <div class="mui-attorney-list">
-                    <div class="mui-attorney-top mui-clearfix">
-                        <div class="user-img">
-                        <img src="../update/userimg01.png" alt="">
-                        </div>
-                        <div class="user-info mui-pull-right">
-                            <p class="name">郑律师</p>
-                            <p class="price">￥86.00/小时</p>
-                            <p class="speciality mui-ellipsis">专长：合同纠纷  债权债务</p>
-                            <div class="padding40">
-                                <a id='confirmBtn' class="mui-btn mui-btn-blue padding2" href="MeConsultInput.html">我要咨询</a>
-                                <a class="mui-btn mui-btn-blue padding2 mui-btn-outlined" href="Message.html">留言板</a>
-                                <a class="mui-btn mui-btn-blue padding2 mui-btn-outlined" href="">律师订单</a>
-                            </div>
-                            <span class="collect">
-                                <i class="mui-icon iconfont font10e">&#xe605;</i>
-                                <span>收藏</span>
-                            </span>
-                        </div>
-                    </div>
-                    <p class="mui-attorney-bottom attorney-intro"> 郑律师先后毕业于辽宁师范大学、中国政法大学，获理学士、法学士的双学士学位，并在当年荣获“中国政法大学优秀毕业生”称号。郑律师视野开阔、思维活跃、逻辑严密、作风稳健...</p>
-                </div>
-                <div class="mui-attorney-list">
-                    <div class="mui-attorney-top mui-clearfix">
-                        <div class="user-img">
-                        <img src="../update/userimg01.png" alt="">
-                        </div>
-                        <div class="user-info mui-pull-right">
-                            <p class="name">郑律师</p>
-                            <p class="price">￥86.00/小时</p>
-                            <p class="speciality mui-ellipsis">专长：合同纠纷  债权债务</p>
-                            <div class="padding40">
-                                <a id='confirmBtn' class="mui-btn mui-btn-blue padding2" href="MeConsultInput.html">我要咨询</a>
-                                <a class="mui-btn mui-btn-blue padding2 mui-btn-outlined" href="Message.html">留言板</a>
-                                <a class="mui-btn mui-btn-blue padding2 mui-btn-outlined" href="">律师订单</a>
-                            </div>
-                            <span class="collect">
-                                <i class="mui-icon iconfont font10e">&#xe605;</i>
-                                <span>收藏</span>
-                            </span>
-                        </div>
-                    </div>
-                    <p class="mui-attorney-bottom attorney-intro"> 郑律师先后毕业于辽宁师范大学、中国政法大学，获理学士、法学士的双学士学位，并在当年荣获“中国政法大学优秀毕业生”称号。郑律师视野开阔、思维活跃、逻辑严密、作风稳健...</p>
+                <div class="mui-pages">
                 </div>
             </div>
         </div>
+        <!--页面主结构结束-->
+        <!--单页面开始-->
+        <div id="setting" class="mui-page">
+            <!--个人中心页面标题栏开始-->
+            <div class="mui-navbar-inner mui-bar mui-bar-nav bg-lan" style="    box-shadow: none;">
+                <h1 class="mui-center mui-title">找律师</h1>
+            </div>
+            <!--页面标题栏结束-->
+            <!--个人中心页面主内容区开始-->
+            <div class="mui-page-content">
+                <div class="mui-scroll-wrapper" style="padding-bottom:30px;">
+                    <div class="mui-scroll">
+                        <div class="mui-content">
+                            <div class="mui-input-row mui-search  margin-top10 margin10">
+                                <input type="search" class="mui-input-clear" placeholder="" style="margin-bottom:10px">
+                                <a href="" style="position: absolute;top: 8px;right: 8px;display: none;">搜索</a>
+                            </div>
+                            <div class="mui-lookinglawyer-tab bg-bai border-t border-b">
+                                <ul class=" mui-clearfix">
+                                    <li><a href="#region">广州市<span class="mui-icon mui-icon-arrowdown font10e"></span></a></li>
+                                    <li><a href="#CaseType">刑事<span class="mui-icon mui-icon-arrowdown font10e"></span></a></li>
+                                    <li><a href="#ObjectType">企业<span class="mui-icon mui-icon-arrowdown font10e"></span></a></li>
+                                    <li><a href="">评价<span class="mui-icon mui-icon-pulldown font10e"></span></a></li>
+                                    <!-- 评价被点击是a标签写入class="mui-active"，如：
+                                    <li><a class="mui-active" href="">评价<span class="mui-icon mui-icon-pulldown font10e"></span></a></li> -->
+                                </ul>
+                            </div>
+                            <div class="bg-bai magrin-bottom10">
+                                <div class="mui-attorney-list">
+                                    <div class="mui-attorney-top mui-clearfix">
+                                        <div class="user-img">
+                                            <a href="info.html"><img src="../update/userimg01.png" alt=""></a>
+                                        </div>
+                                        <div class="user-info mui-pull-right">
+                                            <a href="info.html"><p class="name">郑律师</p></a>
+                                            <p class="price">￥86.00/小时</p>
+                                            <p class="speciality mui-ellipsis">专长：合同纠纷  债权债务</p>
+                                            <div class="padding40">
+                                                <a id='confirmBtn' class="mui-btn mui-btn-blue padding2" href="MeConsultInput.html">我要咨询</a>
+                                                <a class="mui-btn mui-btn-blue padding2 mui-btn-outlined" href="Message.html">留言板</a>
+                                                <a class="mui-btn mui-btn-blue padding2 mui-btn-outlined" href="">律师订单</a>
+                                            </div>
+                                            <span class="collect">
+                                                <i class="mui-icon iconfont font10e">&#xe605;</i>
+                                                <span>收藏</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <p class="mui-attorney-bottom attorney-intro"> 郑律师先后毕业于辽宁师范大学、中国政法大学，获理学士、法学士的双学士学位，并在当年荣获“中国政法大学优秀毕业生”称号。郑律师视野开阔、思维活跃、逻辑严密、作风稳健...</p>
+                                </div>
+                                <div class="mui-attorney-list">
+                                    <div class="mui-attorney-top mui-clearfix">
+                                        <div class="user-img">
+                                        <img src="../update/userimg01.png" alt="">
+                                        </div>
+                                        <div class="user-info mui-pull-right">
+                                            <p class="name">郑律师</p>
+                                            <p class="price">￥86.00/小时</p>
+                                            <p class="speciality mui-ellipsis">专长：合同纠纷  债权债务</p>
+                                            <div class="padding40">
+                                                <a id='confirmBtn' class="mui-btn mui-btn-blue padding2" href="MeConsultInput.html">我要咨询</a>
+                                                <a class="mui-btn mui-btn-blue padding2 mui-btn-outlined" href="Message.html">留言板</a>
+                                                <a class="mui-btn mui-btn-blue padding2 mui-btn-outlined" href="">律师订单</a>
+                                            </div>
+                                            <span class="collect">
+                                                <i class="mui-icon iconfont font10e">&#xe605;</i>
+                                                <span>收藏</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <p class="mui-attorney-bottom attorney-intro"> 郑律师先后毕业于辽宁师范大学、中国政法大学，获理学士、法学士的双学士学位，并在当年荣获“中国政法大学优秀毕业生”称号。郑律师视野开阔、思维活跃、逻辑严密、作风稳健...</p>
+                                </div>
+                                <div class="mui-attorney-list">
+                                    <div class="mui-attorney-top mui-clearfix">
+                                        <div class="user-img">
+                                        <img src="../update/userimg01.png" alt="">
+                                        </div>
+                                        <div class="user-info mui-pull-right">
+                                            <p class="name">郑律师</p>
+                                            <p class="price">￥86.00/小时</p>
+                                            <p class="speciality mui-ellipsis">专长：合同纠纷  债权债务</p>
+                                            <div class="padding40">
+                                                <a id='confirmBtn' class="mui-btn mui-btn-blue padding2" href="MeConsultInput.html">我要咨询</a>
+                                                <a class="mui-btn mui-btn-blue padding2 mui-btn-outlined" href="Message.html">留言板</a>
+                                                <a class="mui-btn mui-btn-blue padding2 mui-btn-outlined" href="">律师订单</a>
+                                            </div>
+                                            <span class="collect">
+                                                <i class="mui-icon iconfont font10e">&#xe605;</i>
+                                                <span>收藏</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <p class="mui-attorney-bottom attorney-intro"> 郑律师先后毕业于辽宁师范大学、中国政法大学，获理学士、法学士的双学士学位，并在当年荣获“中国政法大学优秀毕业生”称号。郑律师视野开阔、思维活跃、逻辑严密、作风稳健...</p>
+                                </div>
+                                <div class="mui-attorney-list">
+                                    <div class="mui-attorney-top mui-clearfix">
+                                        <div class="user-img">
+                                        <img src="../update/userimg01.png" alt="">
+                                        </div>
+                                        <div class="user-info mui-pull-right">
+                                            <p class="name">郑律师</p>
+                                            <p class="price">￥86.00/小时</p>
+                                            <p class="speciality mui-ellipsis">专长：合同纠纷  债权债务</p>
+                                            <div class="padding40">
+                                                <a id='confirmBtn' class="mui-btn mui-btn-blue padding2" href="MeConsultInput.html">我要咨询</a>
+                                                <a class="mui-btn mui-btn-blue padding2 mui-btn-outlined" href="Message.html">留言板</a>
+                                                <a class="mui-btn mui-btn-blue padding2 mui-btn-outlined" href="">律师订单</a>
+                                            </div>
+                                            <span class="collect">
+                                                <i class="mui-icon iconfont font10e">&#xe605;</i>
+                                                <span>收藏</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <p class="mui-attorney-bottom attorney-intro"> 郑律师先后毕业于辽宁师范大学、中国政法大学，获理学士、法学士的双学士学位，并在当年荣获“中国政法大学优秀毕业生”称号。郑律师视野开阔、思维活跃、逻辑严密、作风稳健...</p>
+                                </div>
+                                <div class="mui-attorney-list">
+                                    <div class="mui-attorney-top mui-clearfix">
+                                        <div class="user-img">
+                                        <img src="../update/userimg01.png" alt="">
+                                        </div>
+                                        <div class="user-info mui-pull-right">
+                                            <p class="name">郑律师</p>
+                                            <p class="price">￥86.00/小时</p>
+                                            <p class="speciality mui-ellipsis">专长：合同纠纷  债权债务</p>
+                                            <div class="padding40">
+                                                <a id='confirmBtn' class="mui-btn mui-btn-blue padding2" href="MeConsultInput.html">我要咨询</a>
+                                                <a class="mui-btn mui-btn-blue padding2 mui-btn-outlined" href="Message.html">留言板</a>
+                                                <a class="mui-btn mui-btn-blue padding2 mui-btn-outlined" href="">律师订单</a>
+                                            </div>
+                                            <span class="collect">
+                                                <i class="mui-icon iconfont font10e">&#xe605;</i>
+                                                <span>收藏</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <p class="mui-attorney-bottom attorney-intro"> 郑律师先后毕业于辽宁师范大学、中国政法大学，获理学士、法学士的双学士学位，并在当年荣获“中国政法大学优秀毕业生”称号。郑律师视野开阔、思维活跃、逻辑严密、作风稳健...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="mui-bar mui-bar-tab" id="mui-menu-box">
+                        <a class="mui-menu-item" href="../index.html">
+                            <i class="mui-icon iconfont">&#xe610;</i>
+                            <span class="mui-tab-label">首页</span>
+                        </a>
+                        <a class="mui-menu-item mui-active" href="../LookingLawyer/index.html">
+                            <i class="mui-icon iconfont">&#xe60f;</i>
+                            <span class="mui-tab-label">找律师</span>
+                        </a>
+                        <a class="mui-menu-item" href="../LegalAdvice/index.html">
+                            <i class="mui-icon iconfont">&#xe60d;<span class="mui-badge">9</span></i>
+                            <span class="mui-tab-label">法律咨询</span>
+                        </a>
+                        <a class="mui-menu-item" href="../UserCenter/index.html">
+                            <i class="mui-icon iconfont">&#xe600;</i>
+                            <span class="mui-tab-label">个人中心</span>
+                        </a>
+                        <a class="mui-menu-item" href="../MyLawyer/index.html">
+                            <i class="mui-icon iconfont">&#xe60b;</i>
+                            <span class="mui-tab-label">我的律师</span>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+            <!--个人中心页面主内容区结束-->
+        </div>
+        <!--单页面结束-->
+        <!-- 地区选择页面开始 -->
+        <div id="region" class="mui-page sideslip-page">
+            <div class="mui-navbar-inner mui-bar mui-bar-nav">
+                <button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+                    <span class="mui-icon mui-icon-left-nav"></span>
+                </button>
+                <h1 class="mui-center mui-title">地区选择</h1>
+            </div>
+            <div class="mui-page-content">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+
+                        <div class="mui-content mui-row mui-fullscreen">
+                            <div class="mui-col-xs-4  mui-scroll-region">
+                            <div id="segmentedControls" class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-vertical">
+                                <a class="mui-control-item mui-active"href="#content1">广东1</a>
+                                <a class="mui-control-item" href="#content2">广东2</a>
+                                <a class="mui-control-item" href="#content3">广东3</a>
+                                <a class="mui-control-item" href="#content4">广东4</a>
+                                <a class="mui-control-item" href="#content2">广东2</a>
+                                <a class="mui-control-item" href="#content3">广东3</a>
+                                <a class="mui-control-item" href="#content4">广东4</a>
+                                <a class="mui-control-item" href="#content2">广东2</a>
+                                <a class="mui-control-item" href="#content3">广东3</a>
+                                <a class="mui-control-item" href="#content4">广东4</a>
+                                <a class="mui-control-item" href="#content2">广东2</a>
+                                <a class="mui-control-item" href="#content3">广东3</a>
+                                <a class="mui-control-item" href="#content4">广东4</a>
+                                <a class="mui-control-item" href="#content2">广东2</a>
+                                <a class="mui-control-item" href="#content3">广东3</a>
+                                <a class="mui-control-item" href="#content4">广东4</a>
+                                <a class="mui-control-item" href="#content2">广东2</a>
+                                <a class="mui-control-item" href="#content3">广东3</a>
+                                <a class="mui-control-item" href="#content4">广东4</a>
+                            </div>
+                        </div>
+                        <div id="segmentedControlContents" class="mui-col-xs-8  mui-scroll-region" style="border-left: 1px solid #c8c7cc;">
+                            <div id="content1" class="mui-control-content mui-active">
+                                <ul class="mui-table-view" style="margin:0">
+                                    <li class="mui-table-view-cell">
+                                        <a href="##" class="mui-action-back">广东1广州1</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="##" class="mui-action-back">广东1广州2</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="##" class="mui-action-back">广东1广州1</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="##" class="mui-action-back">广东1广州2</a>
+                                    </li><li class="mui-table-view-cell">
+                                        <a href="##" class="mui-action-back">广东1广州1</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="##" class="mui-action-back">广东1广州2</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="##" class="mui-action-back">广东1广州1</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="##" class="mui-action-back">广东1广州2</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="##" class="mui-action-back">广东1广州1</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="##" class="mui-action-back">广东1广州2</a>
+                                    </li><li class="mui-table-view-cell">
+                                        <a href="##" class="mui-action-back">广东1广州1</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="##" class="mui-action-back">广东1广州2</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="##" class="mui-action-back">广东1广州1</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="##" class="mui-action-back">广东1广州2</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="##" class="mui-action-back">广东1广州1</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="##" class="mui-action-back">广东1广州2</a>
+                                    </li><li class="mui-table-view-cell">
+                                        <a href="##" class="mui-action-back">广东1广州1</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="##" class="mui-action-back">广东1广州2</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="##" class="mui-action-back">广东1广州1</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="##" class="mui-action-back">广东1广州2</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="##" class="mui-action-back">广东1广州1</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="##" class="mui-action-back">广东1广州2</a>
+                                    </li><li class="mui-table-view-cell">
+                                        <a href="##" class="mui-action-back">广东1广州1</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="##" class="mui-action-back">广东1广州2</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 地区选择页面结束 -->
+        <!-- 案件类型页面开始 -->
+        <div id="CaseType" class="mui-page sideslip-page">
+            <div class="mui-navbar-inner mui-bar mui-bar-nav">
+                <button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+                    <span class="mui-icon mui-icon-left-nav"></span>
+                </button>
+                <h1 class="mui-center mui-title">案件类型</h1>
+            </div>
+            <div class="mui-page-content">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <div class="mui-content mui-row mui-fullscreen">
+                            <div class="mui-col-xs-4  mui-scroll-region">
+                            <div id="segmentedControls" class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-vertical">
+                                <a class="mui-control-item mui-active"href="##">婚姻案件</a>
+                                <a class="mui-control-item" href="##">刑事案件</a>
+                                <a class="mui-control-item" href="##">法务纠纷</a>
+                                <a class="mui-control-item" href="##">工作纠纷</a>
+                            </div>
+                        </div>
+                        <div id="segmentedControlContents" class="mui-col-xs-8  mui-scroll-region" style="border-left: 1px solid #c8c7cc;">
+                            <div id="content1" class="mui-control-content mui-active">
+                                <ul class="mui-table-view" style="margin:0">
+                                    <li class="mui-table-view-cell">
+                                        <a href="##" class="mui-action-back">二婚</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="##" class="mui-action-back">离婚</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="##" class="mui-action-back">出轨</a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a href="##" class="mui-action-back">小三</a>
+                                    </li><li class="mui-table-view-cell">
+                                        <a href="##" class="mui-action-back">情妇</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 案件类型页面结束 -->
+        <!-- 我的收藏页面开始 -->
+        <div id="ObjectType" class="mui-page sideslip-page">
+            <div class="mui-navbar-inner mui-bar mui-bar-nav">
+                <button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+                    <span class="mui-icon mui-icon-left-nav"></span>
+                </button>
+                <h1 class="mui-center mui-title">对象类型</h1>
+            </div>
+            <div class="mui-page-content">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <div class="mui-content mui-row mui-fullscreen mui-scroll-region">
+                        <ul class="mui-table-view" style="margin:0">
+                          <li class="mui-table-view-cell"><a class="mui-action-back">企业</a></li>
+                          <li class="mui-table-view-cell"><a class="mui-action-back">个人</a></li>
+                          <li class="mui-table-view-cell"><a class="mui-action-back">其他</a></li>
+                          <li class="mui-table-view-cell"><a class="mui-action-back">企业</a></li>
+                          <li class="mui-table-view-cell"><a class="mui-action-back">个人</a></li>
+                          <li class="mui-table-view-cell"><a class="mui-action-back">其他</a></li>
+                          <li class="mui-table-view-cell"><a class="mui-action-back">企业</a></li>
+                          <li class="mui-table-view-cell"><a class="mui-action-back">个人</a></li>
+                          <li class="mui-table-view-cell"><a class="mui-action-back">其他</a></li>
+                          <li class="mui-table-view-cell"><a class="mui-action-back">企业</a></li>
+                          <li class="mui-table-view-cell"><a class="mui-action-back">个人</a></li>
+                          <li class="mui-table-view-cell"><a class="mui-action-back">其他</a></li>
+                          <li class="mui-table-view-cell"><a class="mui-action-back">企业</a></li>
+                          <li class="mui-table-view-cell"><a class="mui-action-back">个人</a></li>
+                          <li class="mui-table-view-cell"><a class="mui-action-back">其他</a></li>
+                          <li class="mui-table-view-cell"><a class="mui-action-back">企业</a></li>
+                          <li class="mui-table-view-cell"><a class="mui-action-back">个人</a></li>
+                          <li class="mui-table-view-cell"><a class="mui-action-back">其他</a></li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 我的收藏页面结束 -->
+
     </body>
-    <script src="../js/mui.min.js"></script>
+    <script src="../js/mui.min.js "></script>
+    <script src="../js/mui.view.js "></script>
+    <script src='../js/feedback.js'></script>
     <script>
-        // document.getElementById("confirmBtn").addEventListener('tap', function() {
-        //         var btnArray = ['否', '是'];
-        //         mui.confirm('您确定要和这个律师咨询？','信息提示',  btnArray, function(e) {
-        //             if (e.index == 1) {
-        //                 mui.toast('你刚刚确认了和这个律师咨询');
-        //             } else {
-        //                 mui.toast('你刚刚取消了和这个律师咨询');
-        //             }
-        //         })
-        //     });
+        mui.init();
+        //初始化单页view
+        var viewApi = mui('#app').view({
+            defaultPage: '#setting'
+        });
+        //初始化单页的区域滚动
+        mui('.mui-scroll-wrapper').scroll();
+        mui('.mui-scroll-region').scroll();
+
+        // 处理单页面切换
+        var view = viewApi.view;
+        (function($) {
+            //处理view的后退与webview后退
+            var oldBack = $.back;
+            $.back = function() {
+                if (viewApi.canBack()) { //如果view可以后退，则执行view的后退
+                    viewApi.back();
+                } else { //执行webview后退
+                    oldBack();
+                }
+            };
+            //监听页面切换事件方案1,通过view元素监听所有页面切换事件，目前提供pageBeforeShow|pageShow|pageBeforeBack|pageBack四种事件(before事件为动画开始前触发)
+            //第一个参数为事件名称，第二个参数为事件回调，其中e.detail.page为当前页面的html对象
+            view.addEventListener('pageBeforeShow', function(e) {
+                //              console.log(e.detail.page.id + ' beforeShow');
+            });
+            view.addEventListener('pageShow', function(e) {
+                //              console.log(e.detail.page.id + ' show');
+            });
+            view.addEventListener('pageBeforeBack', function(e) {
+                //              console.log(e.detail.page.id + ' beforeBack');
+            });
+            view.addEventListener('pageBack', function(e) {
+                //              console.log(e.detail.page.id + ' back');
+            });
+        })(mui);
     </script>
+
 </html>
