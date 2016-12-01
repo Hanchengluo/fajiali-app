@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>法加理-</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <!--标准mui.css-->
+        <link rel="stylesheet" href="css/mui.min.css">
+        <!--App自定义的css-->
+        <link rel="stylesheet" type="text/css" href="css/app.css"/>
+    </head>
+    <body>
+        <header class="mui-bar mui-bar-nav bg-lan">
+            <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left col-bai"></a>
+            <h1 class="mui-title col-bai">订单信息</h1>
+        </header>
+        <div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <div class="mui-content">
+                    <p class="margin10 padding-top10">用户订单信息</p>
+                    <div class="cgzf-info margin-top10">
+                        <div class="spxx-shop">
+                            <div class=" mlr-pm">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                        <tr>
+                                            <td>商   品</td>
+                                            <td align="right">律师咨询</td>
+                                        </tr>
+                                        <tr>
+                                            <td>交易时间</td>
+                                            <td align="right">2015-12-16 22：41：45</td>
+                                        </tr>
+                                        <tr>
+                                            <td>交易单号</td>
+                                            <td align="right">1205329821521545465665855444</td>
+                                        </tr>
+                                        <tr>
+                                            <td>交易金额</td>
+                                            <td align="right">￥：2321.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>支付方式</td>
+                                            <td align="right">钱包支付</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="margin10 padding-top10">用户提交信息</p>
+                    <div class="mui-content-padded padding10 bg-bai border-t border-b" style="margin:10px 0 0 0">
+                        <p>       据湖北省纪委消息：近期，经湖北省委批准，湖北省纪委对湖北省委委员、省司法厅原党委委员、原副厅长鲁志宏的严重违纪问题进行了立案审查。</p>
+                        <div class="mui-reply-img">
+                            <ul class="mui-clearfix">
+                                <li class="margin-bottom"><img src="update/lawyer1.jpg" data-preview-src="" data-preview-group="3" /></li>
+                                <li class="margin-bottom"><img src="update/lawyer2.jpg" data-preview-src="" data-preview-group="3" /></li>
+                                <li class="margin-bottom"><img src="update/lawyer3.jpg" data-preview-src="" data-preview-group="3" /></li>
+                                <li class="margin-bottom"><img src="update/lawyer2.jpg" data-preview-src="" data-preview-group="3" /></li>
+                                <li class="margin-bottom"><img src="update/lawyer3.jpg" data-preview-src="" data-preview-group="3" /></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="margin10 padding-top10">仲裁人提交信息</p>
+                    <div class="padding10 margin-top10 bg-bai border-t border-b">
+                        <div class="row mui-input-row ">
+                            <textarea id="question" class="mui-input-clear question" placeholder="仲裁人意见" style="height: 100px;margin-bottom: 0;"></textarea>
+                        </div>
+                        <div class="mui-card">
+                            <div class="mui-input-group">
+                                <div class="mui-input-row mui-radio mui-left">
+                                    <label>客户得值</label>
+                                    <input name="radio1" type="radio">
+                                </div>
+                                <div class="mui-input-row mui-radio mui-left">
+                                    <label>律师得值</label>
+                                    <input name="radio1" type="radio" checked>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="margin-top10">
+                            <a href="" class="mui-btn mui-btn-primary mui-btn-block" style="padding: 6px 12px;">提交仲裁</a>
+                        </div>
+                    </div>
+                    <!-- 代码说明：订单提交后用以下代码显示填写的信息 -->
+                    <!-- <p class="margin10 padding-top10">我方仲裁人信息</p>
+                    <div class="cgzf-info margin-top10">
+                        <div class="spxx-shop">
+                            <div class=" mlr-pm">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                        <tr>
+                                            <td>仲裁人支持</td>
+                                            <td align="right">客户得值</td>
+                                        </tr>
+                                        <tr>
+                                            <td>仲裁状态</td>
+                                            <td align="right"><span class="mui-pull-right mui-badge mui-badge-purple font10e">仲裁中</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>仲裁时间</td>
+                                            <td align="right">2016-12-1 09:08:22</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">仲裁意见：这里显示仲裁人提交仲裁之后的信息这里显示仲裁人提交仲裁之后的信息这里显示仲裁人提交仲裁之后的信息</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="margin10 padding-top10">对方仲裁人信息</p>
+                    <div class="cgzf-info margin-top10">
+                        <div class="spxx-shop">
+                            <div class=" mlr-pm">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                        <tr>
+                                            <td>仲裁人支持</td>
+                                            <td align="right">律师得值</td>
+                                        </tr>
+                                        <tr>
+                                            <td>仲裁状态</td>
+                                            <td align="right"><span class="mui-pull-right mui-badge mui-badge-purple font10e">仲裁中</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>仲裁时间</td>
+                                            <td align="right">2016-12-1 09:08:22</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">仲裁意见：律师的工作已经全部完成</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="margin10 padding-top10">首席仲裁人信息</p>
+                    <div class="cgzf-info margin-top10">
+                        <div class="spxx-shop">
+                            <div class=" mlr-pm">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                        <tr>
+                                            <td>仲裁人支持</td>
+                                            <td align="right">律师得值</td>
+                                        </tr>
+                                        <tr>
+                                            <td>仲裁状态</td>
+                                            <td align="right"><span class="mui-pull-right mui-badge mui-badge-purple font10e">仲裁中</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>仲裁时间</td>
+                                            <td align="right">2016-12-1 09:08:22</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">仲裁意见：进平台核实律师的工作已经全部完成，所以订单判定为律师得值</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <script src="js/mui.min.js"></script>
+        <script src="js/mui.zoom.js"></script>
+        <script src="js/mui.previewimage.js"></script>
+        <script>
+            mui.previewImage();
+            mui.init({
+                swipeBack: false,
+            });
+             //主界面和侧滑菜单界面均支持区域滚动；
+            mui('#offCanvasContentScroll').scroll();
+        </script>
+    </body>
+
+</html>
