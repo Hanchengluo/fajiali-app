@@ -7,7 +7,7 @@ function materialLightAnime(){
   setTimeout(function() {
       if(screen.width <600){
       pop.style.width = "90%";
-      pop.style.height = "58%";
+      pop.style.height = "71%";
       pop.style.borderRadius = "2px";
     }
     else{
