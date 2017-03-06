@@ -54,7 +54,7 @@ em, i { font-style: normal; }
 .blank-yh img { height: 40px; }
 .ml5 { margin-left: 5px; }
 .mm-box { width: 89%; margin: 10px auto; height: 40px; overflow: hidden; border: 1px solid #bebebe; }
-.mm-box li { border-right: 1px solid #efefef; height: 40px; float: left; width: 16.3%; background: #FFF; }
+.mm-box li { border-right: 1px solid #efefef; height: 40px; float: left; width: 16.3%; background: #FFF; text-align: center; line-height: 2em; font-size: 2em; }
 .mm-box li.mmdd{ background:#FFF url(../images/dd_03.jpg) center no-repeat ; background-size:25%;}
 .mm-box li:last-child { border-right: none; }
 .xiaq-tb { padding: 5px 0; text-align: center; border-top: 1px solid #dadada; }
